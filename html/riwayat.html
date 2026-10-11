@@ -1,71 +1,120 @@
 <!doctype html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Riwayat</title>
-  </head>
-  <body>
-    <header>
-      <h1>Riwayat Pesanan</h1>
-    </header>
-    <main>
-      <section>
-        <button type="button">Semua</button>
-        <button type="button">Aktif</button>
-        <button type="button">Selesai</button>
+    <title>Riwayat Pesanan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+</head>
 
-        <article>
-          <a href="detail-pesanan.html">
-            <img src="../img/foto-mobil-kecil.png" alt="Toyota Avanza" />
-            <h3>Toyota Avanza</h3>
-            <p>12-14 Okt 2026</p>
-            <p>Rp 1.400.000</p>
-            <p>Menunggu Pembayaran</p>
-            <p>Lihat Detail</p>
-            <img src="../img/riwayaat pesaanan/panah-kanan.svg" alt="" />
-          </a>
-        </article>
+<body class="m-0 p-0" style="color:#0b1d33">
+    <div style="background-color: aliceblue;">
+        <nav class="navbar px-3 w-100" style="background-color: white;">
+            <div class="container-fluid px-2">
+                <div class="w-100 px-3 py-1 d-flex align-items-center justify-content-center">
+                    <h1 class="fw-bold m-0 fs-2" style="color:#0b1d33">Riwayat Pesanan</h1>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section>
+                <div class="d-flex align-items-center container my-2 pb-3 px-3 gap-2">
+                    <button type="button" class="btn btn-dark rounded-pill px-4 py-2 fw-medium">Semua</button>
+                    <button type="button" class="btn btn-dark rounded-pill px-4 py-2 fw-medium">Aktif</button>
+                    <button type="button" class="btn btn-dark rounded-pill px-4 py-2 fw-medium">Selesai</button>
+                </div>
 
-        <article>
-          <a href="detail-pesanan.html">
-            <img src="../img/foto-mobil-kecil.png" alt="Honda BR-V" />
-            <h3>Honda BR-V</h3>
-            <p>01-03 Okt 2026</p>
-            <p>Rp 1.860.000</p>
-            <p>Pembayaran Berhasil</p>
-            <p>Lihat Detail</p>
-            <img src="../img/riwayaat pesaanan/panah-kanan.svg" alt="" />
-          </a>
-        </article>
+                <article class="card border-0 shadow-sm rounded-4 p-3 mb-3 px-3">
+                    <a href="detail-pesanan.html" class="text-decoration-none text-dark">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="../img/foto-mobil-kecil.png " alt="Toyota Avanza" class="rounded-3 object-fit-cover" width="90" height="65" />
+                                <div>
+                                    <h3 class="fw-bold fs-6 mb-1 text-dark">Toyota Avanza</h3>
+                                    <p class="text-muted small mb-1">12-14 Okt 2026</p>
+                                    <p class="fw-bold text-dark mb-0">Rp 1.400.000</p>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-muted fs-5">&rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+                            <span class="badge rounded-pill bg-warning-subtle text-warning-emphasis px-3 py-2 fw-medium">Menunggu Pembayaran</span>
+                            <span class="text-primary fw-medium small">Lihat detail</span>
+                        </div>
+                    </a>
+                </article>
 
-        <article>
-          <a href="detail-pesanan.html">
-            <img src="../img/foto-mobil-kecil.png" alt="Toyota Innova" />
-            <h3>Toyota Innova</h3>
-            <p>20-22 Sept 2026</p>
-            <p>Rp 2.250.000</p>
-            <p>Selesai</p>
-            <p>Lihat Detail</p>
-            <img src="../img/riwayaat pesaanan/panah-kanan.svg" alt="" />
-          </a>
-        </article>
-      </section>
-    </main>
+                <article class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+                    <a href="detail-pesanan.html" class="text-decoration-none text-dark">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="../img/foto-mobil-kecil.png" alt="Honda BR-V" class="rounded-3 object-fit-cover" width="90" height="65" />
+                                <div>
+                                    <h3 class="fw-bold fs-6 mb-1 text-dark">Honda BR-V</h3>
+                                    <p class="text-muted small mb-1">01-03 Okt 2026</p>
+                                    <p class="fw-bold text-dark mb-0">Rp 1.860.000</p>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-muted fs-5">&rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+                            <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2 fw-medium">Pembayaran Berhasil</span>
+                            <span class="text-primary fw-medium small">Lihat detail</span>
+                        </div>
+                    </a>
+                </article>
 
-    <nav>
-      <a href="beranda.html" aria-label="Menuju beranda">
-        <img src="../img/riwayaat pesaanan/rumah-biru.svg" alt="Beranda" />
-      </a>
-      <a href="katalog.html" aria-label="Menuju katalog">
-        <img src="../img/riwayaat pesaanan/logo-mobil-biru.svg" alt="Katalog" />
-      </a>
-      <a href="riwayat.html" aria-label="Menuju riwayat">
-        <img src="../img/riwayaat pesaanan/jam-oren.svg" alt="Riwayat" />
-      </a>
-      <a href="profil.html" aria-label="Menuju profil">
-        <img src="../img/riwayaat pesaanan/user.svg" alt="Profil" />
-      </a>
-    </nav>
-  </body>
+                <article class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+                    <a href="detail-pesanan.html" class="text-decoration-none text-dark">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="../img/foto-mobil-kecil.png" alt="Toyota Innova" class="rounded-3 object-fit-cover" width="90" height="65" />
+                                <div>
+                                    <h3 class="fw-bold fs-6 mb-1 text-dark">Toyota Innova</h3>
+                                    <p class="text-muted small mb-1">20-22 Sep 2026</p>
+                                    <p class="fw-bold text-dark mb-0">Rp 2.250.000</p>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-muted fs-5">&rsaquo;</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between pt-2 border-top">
+                            <span class="badge rounded-pill bg-secondary-subtle text-secondary px-3 py-2 fw-medium">Selesai</span>
+                            <span class="text-primary fw-medium small">Lihat detail</span>
+                        </div>
+                    </a>
+                </article>
+            </section>
+        </main>
+
+        <nav class="navbar fixed-bottom bg-white border-top py-2 px-3 shadow-sm">
+            <div class="container-fluid d-flex justify-content-around align-items-center">
+                <a href="beranda.html" aria-label="Menuju beranda" class="d-flex flex-column align-items-center text-decoration-none py-1 px-3">
+                    <img src="../css/beranda.svg" alt="Beranda" style="width: 22px; height: 22px; opacity: 0.6;" />
+                    <span class="small mt-1 text-muted" style="font-size: 0.7rem;">Beranda</span>
+                </a>
+                <a href="katalog.html" aria-label="Menuju katalog" class="d-flex flex-column align-items-center text-decoration-none py-1 px-3">
+                    <img src="../css/katalog.svg" alt="Katalog" style="width: 22px; height: 22px; opacity: 0.6;" />
+                    <span class="small mt-1 text-muted" style="font-size: 0.7rem;">Katalog</span>
+                </a>
+                <a href="riwayat.html" aria-label="Menuju riwayat" class="d-flex flex-column align-items-center text-decoration-none py-1 px-3 rounded-pill" style="background-color: rgba(255, 107, 53, 0.12);">
+                    <img src="../css/riwayat.svg" alt="Riwayat" style="width: 22px; height: 22px; filter: invert(41%) sepia(85%) saturate(1436%) hue-rotate(338deg) brightness(101%) contrast(97%);" />
+                    <span class="small mt-1 text-muted" style="font-size: 0.7rem;">Riwayat</span>
+                </a>
+                <a href="profil.html" aria-label="Menuju profil" class="d-flex flex-column align-items-center text-decoration-none py-1 px-3">
+                    <img src="../css/profil.svg" alt="Profil" style="width: 22px; height: 22px; opacity: 0.6;" />
+                    <span class="small mt-1 text-muted" style="font-size: 0.7rem;">Profil</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</body>
+
 </html>
