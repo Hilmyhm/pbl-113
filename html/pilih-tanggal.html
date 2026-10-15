@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilih tanggal</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pilih Tanggal</h1>
+      <a href="detail-mobil.html" aria-label="Kembali ke Detail Mobil">
+        <img src="../img/pilih tanggal/panah-kiri-bold.svg" alt="" />
+      </a>
+    </header>
+
+    <main>
+      <section>
+        <article>
+          <img src="../img/foto-mobil-kecil.png" alt="Toyota Avanza" />
+          <h2>Toyota Avanza</h2>
+          <p>MPV Keluarga · Otomatis · 7 Kursi</p>
+          <p>Rp 450.000 / hari</p>
+        </article>
+      </section>
+
+      <section aria-label="Tanggal sewa">
+        <div>
+          <label for="tanggal-mulai">Tanggal Mulai</label>
+          <input type="date" id="tanggal-mulai" name="tanggal-mulai" required />
+        </div>
+
+        <div>
+          <label for="tanggal-selesai">Tanggal Selesai</label>
+          <input
+            type="date"
+            id="tanggal-selesai"
+            name="tanggal-selesai"
+            required
+          />
+        </div>
+      </section>
+
+      <section aria-label="Ringkasan sewa">
+        <div>
+          <span>Durasi sewa</span>
+          <span>3 hari</span>
+        </div>
+
+        <div>
+          <span>Estimasi biaya</span>
+          <span>Rp 1.350.000</span>
+        </div>
+      </section>
+
+      <button type="button">
+        Cek Ketersediaan
+        <img src="../img/pilih tanggal/panah-kanan-bold.svg" alt="" />
+      </button>
+    </main>
+  </body>
+</html>
