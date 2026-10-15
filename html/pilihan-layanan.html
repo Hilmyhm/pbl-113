@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilihan Layanan</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pilihan Layanan</h1>
+      <a href="data-diri.html" aria-label="Kembali ke Data Diri">
+        <img src="../img/pilih-layanan/kembali.svg" alt="" />
+      </a>
+    </header>
+
+    <main>
+      <h2>Bagaimana Anda ingin bepergian?</h2>
+      <p>
+        Pilih layanan rental yang paling sesuai dengan kebutuhan perjalanan.
+      </p>
+
+      <form>
+        <div>
+          <input
+            type="radio"
+            id="dengan-sopir"
+            name="layanan"
+            value="dengan-sopir"
+            required
+          />
+          <label for="dengan-sopir">
+            <img src="../img/pilih-layanan/dengan-sopir.svg" alt="" />
+            <strong>Dengan Sopir</strong>
+            <span>Mobil dikemudikan sopir profesional dari pihak rental.</span>
+          </label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="lepas-kunci"
+            name="layanan"
+            value="lepas-kunci"
+            required
+          />
+          <label for="lepas-kunci">
+            <img src="../img/pilih-layanan/kunci.svg" alt="" />
+            <strong>Lepas Kunci</strong>
+            <span>
+              Anda mengemudikan mobil sendiri dengan proses serah terima mudah.
+            </span>
+          </label>
+        </div>
+        <button type="button">
+          Lanjut
+          <img src="../img/pilih-layanan/lanjut.svg" alt="" />
+        </button>
+      </form>
+
+      <section>
+        <img src="../img/pilih-layanan/rekomendasi-perjalanan.svg" alt="" />
+        <h3>Rekomendasi perjalanan santai</h3>
+        <p>pilih dengan sopir untuk perjalanan tanpa repot parkir dan rute.</p>
+      </section>
+    </main>
+  </body>
+</html>
