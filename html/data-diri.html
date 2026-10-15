@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Diri</title>
+  </head>
+  <body>
+    <header>
+      <h1>Data Diri</h1>
+      <a
+        href="syarat-dan-ketentuan.html"
+        aria-label="Kembali ke Syarat & Ketentuan"
+      >
+        <img src="../img/data-diri/kembali.svg" alt="" />
+      </a>
+    </header>
+
+    <main>
+      <h2>Lengkapi data penyewa</h2>
+      <p>Pastikan data sesuai dokumen resmi untuk proses verifikasi.</p>
+      <form action="pilihan-layanan.html" method="post">
+        <div>
+          <label for="nama-lengkap">Nama Lengkap</label>
+          <input
+            type="text"
+            id="nama-lengkap"
+            name="nama-lengkap"
+            placeholder="Masukkan nama lengkap"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="nomor-hp">Nomor HP</label>
+          <input
+            type="tel"
+            id="nomor-hp"
+            name="nomor-hp"
+            placeholder="08xxxxxxxxxx"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="nik">NIK</label>
+          <input
+            type="text"
+            id="nik"
+            name="nik"
+            placeholder="16 digit nomor KTP"
+            inputmode="numeric"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="foto-ktp">Foto KTP</label>
+          <img src="../img/data-diri/upload.svg" alt="" />
+          <input
+            type="file"
+            id="foto-ktp"
+            name="foto-ktp"
+            accept="image/*"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="swafoto">Swafoto (Selfie)</label>
+          <img src="../img/data-diri/upload.svg" alt="" />
+          <input
+            type="file"
+            id="swafoto"
+            name="swafoto"
+            accept="image/*"
+            required
+          />
+        </div>
+
+        <img src="../img/data-diri/icon-data-anda-terenkripsi.svg" alt="" />
+
+        <p>
+          Data Anda dienkripsi dan hanya digunakan untuk verifikasi penyewaan.
+        </p>
+
+        <button type="submit">
+          Lanjut
+          <img src="../img/data-diri/lanjut.svg" alt="" />
+        </button>
+      </form>
+    </main>
+  </body>
+</html>
