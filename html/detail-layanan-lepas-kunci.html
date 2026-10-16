@@ -5,5 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Layanan</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Detail Layanan</h1>
+      <a href="pilihan-layanan.html" aria-label="Kembali ke Pilihan Layanan">
+        <img src="../img/lepas-kunci/kembali.svg" alt="" />
+      </a>
+    </header>
+
+    <main>
+      <p>Lepas Kunci</p>
+      <h2>Metode penerimaan mobil</h2>
+      <div>
+        <input
+          type="radio"
+          id="diantar"
+          name="metode-penerimaan"
+          value="diantar"
+          required
+        />
+
+        <label for="diantar">
+          <img src="../img/lepas-kunci/diantar.svg" alt="" />
+          <strong>Diantar ke lokasi</strong>
+          <span>Mobil diantar ke alamat Anda.</span>
+        </label>
+      </div>
+
+      <div>
+        <input type="radio" id="ambil" name="metode-penerimaan" value="ambil" />
+
+        <label for="ambil">
+          <img src="../img/lepas-kunci/ambil-kegarasi.svg" alt="" />
+          <strong>Ambil di garasi</strong>
+          <span>Ambil langsung di garasi rental.</span>
+        </label>
+      </div>
+
+      <label for="lokasi-pengantaran"
+        >Lokasi pengantaran
+        <textarea
+          id="lokasi-pengantaran"
+          name="lokasi-pengantaran"
+          placeholder="Tulis alamat lengkap..."
+          rows="4"
+        ></textarea>
+      </label>
+
+      <a href="ringkasan-pemesanan.html"
+        >Lanjut
+        <img src="../img/lepas-kunci/lanjut.svg" alt="" />
+      </a>
+    </main>
+  </body>
 </html>
