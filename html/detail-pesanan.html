@@ -1,93 +1,108 @@
 <!doctype html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Pesanan</title>
-  </head>
-  <body>
-    <header>
-      <h1>Detail Pesanan</h1>
-    </header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
 
-    <a href="beranda.html" aria-label="Kembali ke Beranda">
-      <img src="../img/detail pesanan/panah-kiri.svg" alt=""
-    /></a>
+<body class="m-0 p-0 min-vh-100" style="color: #0b1d33; background-color: #eef7fc;">
+    <nav class="navbar bg-white py-3 border-bottom">
+        <div class="container-fluid position-relative d-flex justify-content-center align-items-center px-3">
+            <a href="beranda.html" aria-label="Kembali ke Katalog" class="position-absolute start-0 ms-3 d-flex align-items-center justify-content-center rounded-circle bg-light text-decoration-none text-dark fw-bold fs-3 pb-1" style="width: 40px; height: 40px; color: #0b1d33;">‹</a>
+            <h2 class="fs-3 fw-bold m-0" style="color: #0b1d33;">Detail Pesanan</h2>
+        </div>
+    </nav>
 
     <main>
-      <section aria-label="Tahapan pesanan">
-        <ol>
-          <li>
-            <img src="../img/detail pesanan/bulat-biru.svg" alt="" />
-            <span>Menunggu Pembayaran</span>
-          </li>
+        <section aria-label="Tahapan pesanan" class="px-4 py-3 bg-white rounded-4 shadow-sm my-3">
+            <ol class="d-flex justify-content-between align-items-center list-unstyled m-0 p-0 position-relative">
+                <li class="d-flex flex-column align-items-center text-center position-relative z-1">
+                    <img src="../img/detail pesanan/bulat-biru.svg" alt="Selesai" width="16" height="16" class="mb-2" />
+                    <span class="small fw-bold text-dark" style="font-size: 12px;">Menunggu<br>Pembayaran</span>
+                </li>
 
-          <li>
-            <img src="../img/detail pesanan/bulat-biru.svg" alt="" />
-            <span>Pembayaran Berhasil</span>
-          </li>
+                <li class="d-flex flex-column align-items-center text-center position-relative z-1">
+                    <img src="../img/detail pesanan/bulat-biru.svg" alt="Aktif" width="16" height="16" class="mb-2" />
+                    <span class="small fw-bold text-dark" style="font-size: 12px;">Pembayaran<br>Berhasil</span>
+                </li>
 
-          <li>
-            <img src="../img/detail pesanan/bulat-putih.svg" alt="" />
-            <span>Selesai</span>
-          </li>
-        </ol>
-      </section>
+                <li class="d-flex flex-column align-items-center text-center position-relative z-1">
+                    <img src="../img/detail pesanan/bulat-putih.svg" alt="Belum" width="16" height="16" class="mb-2 border border-secondary rounded-circle" />
+                    <span class="small text-muted" style="font-size: 12px;">Selesai</span>
+                </li>
+            </ol>
+        </section>
 
-      <section aria-label="Kode booking">
-        <p>Kode Booking</p>
-        <p>BK-ZN4X9K9</p>
-      </section>
+        <section aria-label="Kode booking" class="px-3 p-3 bg-success bg-opacity-10 border border-success border-opacity-25 rounded-4 my-3">
+            <p class="text-success small mb-1 fw-medium">Kode Booking</p>
+            <h5 class="text-success fw-bold m-0">BK-ZN4X9K9</h5>
+        </section>
 
-      <section aria-label="Informasi Pesanan">
-        <img src="../img/foto-mobil-kecil.png" alt="Toyota Avanza" />
-        <div>
-          <p>Mobil</p>
-          <p>Toyota Avanza</p>
+        <section aria-label="Informasi Pesanan" class="card border-0 shadow-sm rounded-4 p-3 my-3">
+
+            <div class="d-flex flex-column gap-2 mb-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Mobil</span>
+                    <strong class="text-dark">Toyota Avanza</strong>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Tanggal</span>
+                    <strong class="text-dark">12–14 Okt 2026</strong>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Layanan</span>
+                    <strong class="text-dark">Lepas Kunci</strong>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Penerimaan</span>
+                    <strong class="text-dark">Diantar</strong>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Nama</span>
+                    <strong class="text-dark">Nama Customer</strong>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Nomor HP</span>
+                    <strong class="text-dark">08xxxxxxxxxx</strong>
+                </div>
+            </div>
+
+            <hr class="text-muted opacity-25 my-2">
+
+            <div class="d-flex flex-column gap-2 pt-1">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-dark">Total</strong>
+                    <strong class="text-dark fs-5">Rp 1.400.000</strong>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Status</span>
+                    <strong class="text-success">Pembayaran Berhasil</strong>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-muted small">Metode</span>
+                    <strong class="text-dark">QRIS</strong>
+                </div>
+            </div>
+        </section>
+
+        <div class="container my-4 pb-5 d-grid gap-3">
+            <a href="beranda.html" class="btn btn-outline-dark py-3 rounded-1 fw-bold" style="border-color: #0b1d33;">
+          Kembali ke Dashboard
+        </a>
         </div>
 
-        <div>
-          <p>Tanggal</p>
-          <p>12-14 Okt 2026</p>
-        </div>
-
-        <div>
-          <p>Layanan</p>
-          <p>Lepas Kunci</p>
-        </div>
-
-        <div>
-          <p>Penerimaan</p>
-          <p>Diantar</p>
-        </div>
-
-        <div>
-          <p>Nama</p>
-          <p>Nama Customer</p>
-        </div>
-
-        <div>
-          <p>Nomor HP</p>
-          <p>08xxxxxxxxxx</p>
-        </div>
-
-        <div>
-          <p>Total</p>
-          <p>Rp 1.400.000</p>
-        </div>
-
-        <div>
-          <p>Status</p>
-          <p>Pembayaran Berhasil</p>
-        </div>
-
-        <div>
-          <p>Metode</p>
-          <p>QRIS</p>
-        </div>
-      </section>
-
-      <a href="beranda.html">Kembali ke Dashboard</a>
     </main>
-  </body>
+</body>
+
 </html>

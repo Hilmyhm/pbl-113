@@ -1,41 +1,91 @@
 <!doctype html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Mobil</title>
-  </head>
-  <body>
-    <header>
-      <h1>Detail Mobil</h1>
-      <a href="katalog.html" aria-label="Kembali ke Katalog">
-        <img src="../img/detail mobil/panah-kiri.svg" alt=""
-      /></a>
-    </header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body class="m-0 p-0 min-vh-100" style="color: #0b1d33; background-color: #eef7fc;">
+    <nav class="navbar bg-white py-3 border-bottom">
+        <div class="container-fluid position-relative d-flex justify-content-center align-items-center px-3">
+            <a href="katalog.html" aria-label="Kembali ke Katalog" class="position-absolute start-0 ms-3 d-flex align-items-center justify-content-center rounded-circle bg-light text-decoration-none text-dark fw-bold fs-3 pb-1" style="width: 40px; height: 40px; color: #0b1d33;">‹</a>
+            <h2 class="fs-3 fw-bold m-0" style="color: #0b1d33;">Detail Mobil</h2>
+        </div>
+    </nav>
 
     <main>
-      <section>
-        <img src="../img/foto-mobil-besar.jpg" alt="Toyota Avanza" />
-        <h2>Toyota Avanza</h2>
-        <p>MPV Keluarga · 2024</p>
-        <p>Tersedia</p>
-        <p>Rp 450.000 / hari</p>
-      </section>
+        <section class="card border-0 shadow-sm p-3 px-3 rounded-4">
+            <div id="carSlider" class="carousel slide mb-3" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-4 overflow-hidden bg-light" style="height: 260px;">
+                    <div class="carousel-item active h-100">
+                        <img src="../img/foto-mobil-besar.jpg" class="d-block w-100 h-100 object-fit-contain" alt="Mobil Tampak Depan">
+                    </div>
 
-      <section>
-        <h2>Spesifikasi</h2>
-        <p>
-          Toyota Avanza adalah mobil keluarga yang nyaman dengan kabin luas dan
-          kapasitas hingga tujuh penumpang. Desainnya cocok untuk perjalanan
-          bersama keluarga maupun aktivitas sehari-hari. Toyota Avanza juga
-          memiliki ruang bagasi yang cukup untuk membawa barang bawaan.
-        </p>
-      </section>
+                    <div class="carousel-item h-100">
+                        <img src="../img/foto-mobil-besar.jpg" class="d-block w-100 h-100 object-fit-contain" alt="Mobil Tampak Samping">
+                    </div>
 
-      <a href="pilih-tanggal.html" aria-label="Pilih Mobil">
-        <p>Pilih Mobil</p>
-        <img src="../img/detail mobil/panah-kanan.svg" alt="" />
-      </a>
+                    <div class="carousel-item h-100">
+                        <img src="../img/foto-mobil-besar.jpg" class="d-block w-100 h-100 object-fit-contain" alt="Mobil Tampak Belakang">
+                    </div>
+
+                    <div class="carousel-item h-100">
+                        <img src="../img/foto-mobil-besar.jpg" class="d-block w-100 h-100 object-fit-contain" alt="Mobil Interior">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="card-body p-0">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h2 class="card-title fs-4 fw-bold text-dark mb-0">Toyota Avanza</h2>
+                    <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill fw-semibold">
+                      tersedia
+                    </span>
+                </div>
+
+                <p class="text-muted small mb-3">MPV Keluarga · Otomatis · 7 Kursi</p>
+                <p class="text-dark fs-5 fw-bold">Rp 450.000 / hari</p>
+            </div>
+        </section>
+
+        <section class="m-0 p-0 min-vh-100">
+            <h2 class="px-3 mb-3 mt-3 fw-bold h3">Spesifikasi</h2>
+            <p class="px-3 mt-1 h6 my-2">
+                <span class="fw-bold h6">Kapasitas Penumpang : <span class="text-muted h6">7 Kursi</span></span><br>
+                <span class="fw-bold h6">Transmisi : <span class="text-muted h6">Otomatis</span></span><br>
+                <span class="fw-bold h6">Bahan Bakar : <span class="text-muted h6">Bensin</span></span><br>
+                <span class="fw-bold h6">Kapasitas Mesin : <span class="text-muted h6">1.3L</span></span><br>
+                <span class="fw-bold h6">Fitur Kenyamanan : <span class="text-muted h6">AC Double Blower, Head Unit Touchscreen, USB Charger di setiap baris</span></span><br>
+                <span class="fw-bold h6">Fitur Keamanan : <span class="text-muted h6">ABS (Anti-lock Braking System), Dual SRS Airbag</span></span>
+                <br>
+                <span class="h6"> Toyota Avanza hadir sebagai pilihan utama kendaraan keluarga yang handal, nyaman, dan efisien untuk menemani setiap perjalanan Anda. Mobil ini dibekali dengan kapasitas kabin yang luas dan lega, mampu menampung hingga 7 kursi (7-seater) dengan konfigurasi tempat duduk fleksibel yang memastikan kenyamanan seluruh anggota keluarga. Untuk kemudahan berkendara di berbagai kondisi jalan, Avanza ini mengandalkan sistem transmisi otomatis yang responsif dan halus. Selain itu, kendaraan ini juga dilengkapi dengan pendingin udara kabin yang sejuk merata, ruang bagasi yang lapang, serta performa mesin bertenaga yang tetap hemat bahan bakar, menjadikannya partner terbaik untuk liburan maupun perjalanan harian Anda.</span>
+            </p>
+        </section>
+
+        <form action="ringkasan-pemesanan.html" method="get">
+            <div class="fixed-bottom bg-white py-3 px-3 border-top shadow-sm">
+                <div class="container p-0">
+                    <button type="submit" class="btn text-white w-100 py-3 rounded-pill fw-bold d-flex align-items-center justify-content-center gap-2" style="background-color: #0b1d33;"> Pilih Mobil
+              <img src="../img/detail mobil/panah-kanan.svg" alt="lanjut" width="18" height="18" />
+            </button>
+                </div>
+            </div>
+        </form>>
+
     </main>
-  </body>
+</body>
+
 </html>

@@ -1,92 +1,63 @@
 <!doctype html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Profil</title>
-  </head>
-  <body>
-    <header>
-      <h1>Edit Profil</h1>
-    </header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
 
-    <a href="profil.html" aria-label="Kembali ke Profil">
-      <img src="../img/edit profil/panah-kiri.svg" alt="" />
-    </a>
+<body>
+    <nav class="navbar px-4" style="background-color: white">
+        <div class="rounded-4 p-2 d-flex align-items-center justify-content-center gap-4" style="background-color: white">
+            <a href="profil.html" aria-label="Kembali ke profil" class="text-decoration-none fw-bold fs-3 align-items-center" style="color: #0b1d33; line-height: 1">‹</a>
+            <h2 class="fw-bold m-0 fs-3" style="line-height: 1">
+                <span style="color: #0b1d33">Edit Profil</span>
+            </h2>
+        </div>
+    </nav>
 
     <form action="#" method="post" enctype="multipart/form-data">
-      <div>
-        <label for="foto-profil">Foto Profil</label>
+        <div class="mb-4 px-3">
+            <label for="foto-profil" class="form-label fw-bold" style="color: #0b1d33;">Foto KTP</label>
+            <label for="foto-profil" class="w-100 bg-white rounded-4 p-4 text-center d-block cursor-pointer" style="border: 2px dashed #a0aec0; cursor: pointer;">
+                <img src="../img/edit profil/upload.svg" alt="Upload Icon" class="mb-2" width="24" height="24" />
+                <p class="text-secondary small mb-0 fw-medium">Unggah / ambil foto</p>
+                <input type="file" class="d-none" id="foto-profil" name="foto-profil" accept="image/*" required />
+            </label>
+        </div>
 
-        <label for="foto-profil">
-          <img
-            src="../img/edit profil/upload.svg"
-            alt=""
-            width="24"
-            height="24"
-          />
-          <span>Unggah / ambil foto</span>
-        </label>
+        <div class="mb-4 px-3">
+            <label for="nama-lengkap" class="h8 fw-bold">Nama Lengkap</label>
+            <input type="text" class="form-control mt-1" style="border-color: #0b1d33" id="nama" name="nama" placeholder="Nama sesuai KTP" required />
+        </div>
 
-        <input
-          type="file"
-          id="foto-profil"
-          name="foto-profil"
-          accept="image/*"
-        />
-      </div>
+        <div class="mb-4 px-3">
+            <label for="email" class="h8 fw-bold">Email</label>
+            <input type="email" class="form-control mt-1" style="border-color: #0b1d33" id="email" name="email" placeholder="contoh@email.com" required />
+        </div>
 
-      <div>
-        <label for="nama">Nama Lengkap</label>
-        <input
-          type="text"
-          id="nama"
-          name="nama"
-          placeholder="Nama sesuai KTP"
-        />
-      </div>
+        <div class="mb-4 px-3">
+            <label for="nomor-hp" class="h8 fw-bold">Nomor HP</label>
+            <input type="tel" class="form-control mt-1" style="border-color: #0b1d33" id="nomor-hp" name="nomor-hp" placeholder="08xxxxxxxxxx" required/>
+        </div>
 
-      <div>
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="contoh@email.com"
-        />
-      </div>
+        <div class="mb-4 px-3">
+            <label for="password" class="h8 fw-bold">Password Baru</label>
+            <input type="password" class="form-control mt-1" style="border-color: #0b1d33" id="password" name="password" placeholder="Minimal 8 karakter" required />
+        </div>
 
-      <div>
-        <label for="nomor-hp">Nomor HP</label>
-        <input
-          type="tel"
-          id="nomor-hp"
-          name="nomor-hp"
-          placeholder="08xxxxxxxxxx"
-        />
-      </div>
+        <div class="mb-4 px-3">
+            <label for="konfirmasi-password" class="h8 fw-bold">Konfirmasi Password</label>
+            <input type="password" class="form-control mt-1" style="border-color: #0b1d33" id="konfirmasi-password" name="konfirmasi-password" placeholder="Ulangi password" required />
+        </div>
 
-      <div>
-        <label for="password">Password Baru</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Minimal 8 karakter"
-        />
-      </div>
-
-      <div>
-        <label for="konfirmasi-password">Konfirmasi Password</label>
-        <input
-          type="password"
-          id="konfirmasi-password"
-          name="konfirmasi-password"
-          placeholder="Ulangi password"
-        />
-      </div>
-
-      <button type="submit">Simpan</button>
+        <div class="d-grid gap-2 px-3">
+            <button class="btn text-white fw-bold py-2" type="submit" style="background-color: #0b1d33; border-color: #0b1d33">
+               Simpan
+            </button>
+        </div>
     </form>
-  </body>
+</body>
+
 </html>
