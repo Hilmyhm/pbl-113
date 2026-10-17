@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilihan Pembayaran</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pembayaran</h1>
+      <a href="ringkasan-pemesanan.html" aria-label="Kembali ke ringkasan">
+        <img src="../img/option-bayar/kembali.svg" alt="" />
+      </a>
+    </header>
+
+    <main>
+      <section>
+        <h2>Detail Pesanan</h2>
+
+        <div>
+          <span>Mobil</span>
+          <strong>Toyota Avanza</strong>
+        </div>
+
+        <div>
+          <span>Tanggal</span>
+          <strong>12-14 Okt 2026</strong>
+        </div>
+
+        <div>
+          <span>Layanan</span>
+          <strong>Lepas Kunci</strong>
+        </div>
+
+        <hr />
+
+        <div>
+          <span>Total Pembayaran</span>
+          <strong>Rp 1.400.000</strong>
+        </div>
+      </section>
+
+      <section>
+        <h2>Pilih metode pembayaran</h2>
+
+        <form>
+          <div>
+            <input
+              type="radio"
+              id="qris"
+              name="metode-pembayaran"
+              value="qris"
+              required
+            />
+            <label for="qris">
+              <img src="../img/option-bayar/qr-code.svg" alt="" />
+              <strong>QRIS</strong>
+              <span
+                >Scan QR, pembayaran diverifikasi otomatis. Berlaku 10
+                menit.</span
+              >
+            </label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="tunai"
+              name="metode-pembayaran"
+              value="tunai"
+            />
+            <label for="tunai">
+              <img src="../img/option-bayar/tunai.svg" alt="" />
+              <strong>Tunai</strong>
+              <span
+                >Bayar di garasi dengan kode pembayaran. Berlaku 3 jam.</span
+              >
+            </label>
+          </div>
+
+          <div>
+            <img src="../img/option-bayar/info.svg" alt="" />
+            <p>
+              Pesanan dikonfirmasi setelah pembayaran berhasil diverifikasi.
+            </p>
+          </div>
+
+          <button type="submit">
+            Konfirmasi Pilihan
+            <img src="../img/option-bayar/lanjutkn.svg" alt="" />
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
