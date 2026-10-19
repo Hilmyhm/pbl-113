@@ -1,107 +1,137 @@
 <!doctype html>
 <html lang="id">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ringkasan Pemesanan</title>
-  </head>
-  <body>
-    <header>
-      <h1>Ringkasan Pemesanan</h1>
-      <a
-        href="detail-layanan-lepas-kunci.html"
-        aria-label="Kembali ke Detail Layanan"
-      >
-        <img src="../img/ringkasan-transaksi/kembali.svg" alt="" />
-      </a>
-    </header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="m-0 p-0 min-vh-100" style="color: #0b1d33; background-color: #eef7fc;">
+    <nav class="navbar bg-white py-3 mb-3 border-bottom">
+        <div class="container-fluid position-relative d-flex justify-content-center align-items-center px-3">
+            <a href="detail-layanan-lepas-kunci.html" aria-label="Kembali ke Detail Layanan" class="position-absolute start-0 ms-3 d-flex align-items-center justify-content-center rounded-circle bg-light text-decoration-none text-dark fw-bold fs-3 pb-1" style="width: 40px; height: 40px; color: #0b1d33;">‹</a>
+            <h2 class="fs-3 fw-bold m-0" style="color: #0b1d33;">Ringkasan Pemesanan</h2>
+        </div>
+    </nav>
 
     <main>
-      <section>
-        <img src="../img/ringkasan-transaksi/Car image.png" alt="" />
-        <p>Toyota Avanza</p>
-        <p>MPV · Otomatis · 7 Kursi</p>
-        <p>Rp 450.000 / hari</p>
-      </section>
+        <section>
+            <div class="card rounded-4 border p-2 shadow-sm mx-auto" style="max-width: 450px;">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../img/ringkasan-transaksi/Car image.png" alt="Toyota Avanza" class="rounded-3 img-fluid" style="width: 140px; height: 95px; object-fit: cover;">
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Toyota Avanza</h6>
+                        <p class="text-muted small mb-2">MPV &bull; Otomatis &bull; 7 Kursi</p>
+                        <div>
+                            <span class="fw-bold fs-6 text-dark">Rp 450.000</span>
+                            <span class="text-muted small">/ hari</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <section>
-        <h2>Detail perjalanan</h2>
+        <div class="card rounded-4 border p-4 shadow-sm mx-auto" style="max-width: 450px;">
+            <section>
+                <h6 class="fw-bold mb-3 text-dark">Detail perjalanan</h6>
 
-        <div>
-          <span>Tanggal</span>
-          <strong>12-14 Okt 2026</strong>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Tanggal</span>
+                    <strong class="fw-semibold text-dark">12-14 Okt 2026</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Durasi</span>
+                    <strong class="fw-semibold text-dark">3 hari</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Layanan</span>
+                    <strong class="fw-semibold text-dark">Lepas Kunci</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Penerimaan</span>
+                    <strong class="fw-semibold text-dark">Diantar</strong>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <span class="text-muted">Lokasi</span>
+                    <strong class="fw-semibold text-dark">Batam Center</strong>
+                </div>
+            </section>
+
+            <hr class="my-4 text-muted opacity-25">
+
+            <section>
+                <h6 class="fw-bold mb-3 text-dark">Data penyewa</h6>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Nama</span>
+                    <strong class="fw-semibold text-dark">Nama Customer</strong>
+                </div>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Nomor HP</span>
+                    <strong class="fw-semibold text-dark">08xxxxxxxxxx</strong>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <span class="text-muted">NIK</span>
+                    <strong class="fw-semibold text-dark">16xxxxxxxxxxxxxx</strong>
+                </div>
+            </section>
+
         </div>
 
-        <div>
-          <span>Durasi</span>
-          <strong>3 hari</strong>
+        <section class="card rounded-4 border p-4 shadow-sm mx-auto" style="max-width: 450px;">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Sewa mobil (3 hari)</span>
+                <strong class="fw-semibold text-dark">Rp 1.350.000</strong>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Biaya antar</span>
+                <strong class="fw-semibold text-dark">Rp 50.000</strong>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted">Biaya dengan sopir</span>
+                <strong class="fw-semibold text-dark">Rp -</strong>
+            </div>
+
+            <hr class="my-3 text-muted opacity-25">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <strong class="fw-bold text-dark">Total Biaya</strong>
+                <strong class="fw-bold text-dark fs-5">Rp 1.400.000</strong>
+            </div>
+
+        </section>
+
+        <div class="container my-4" style="padding-bottom: 100px;">
+            <div class="container my-4 pb-5 d-grid gap-3">
+                <a href="detail-layanan-lepas-kunci.html" class="btn btn-outline-dark py-3 rounded-1 fw-bold" style="border-color: #0b1d33;">
+          Kembali / Edit
+        </a>
+            </div>
+
+            <form id="formLayanan" action="pilihan-pembayaran.html" method="get">
+                <div class="fixed-bottom bg-white py-3 px-3 border-top shadow-sm">
+                    <div class="container p-0">
+                        <button type="submit" class="btn text-white w-100 py-3 rounded-pill fw-bold d-flex align-items-center justify-content-center gap-2" style="background-color: #0b1d33;"> Konfirmasi Pemesanan
+                      <img src="../img/ringkasan-transaksi/lanjutkan.svg" alt="lanjut" width="18" height="18" />
+                    </button>
+                    </div>
+                </div>
+            </form>
+
         </div>
 
-        <div>
-          <span>Layanan</span>
-          <strong>Lepas Kunci</strong>
-        </div>
 
-        <div>
-          <span>Penerimaan</span>
-          <strong>Diantar</strong>
-        </div>
-
-        <div>
-          <span>Lokasi</span>
-          <strong>Batam Center</strong>
-        </div>
-      </section>
-
-      <section>
-        <h3>Data penyewa</h3>
-
-        <div>
-          <span>Nama</span>
-          <strong>Nama Customer</strong>
-        </div>
-
-        <div>
-          <span>Nomor HP</span>
-          <strong>08xxxxxxxxxx</strong>
-        </div>
-
-        <div>
-          <span>NIK</span>
-          <strong>16xxxxxxxxxxxxxx</strong>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <span>Sewa mobil (3 hari)</span>
-          <strong>Rp 1.350.000</strong>
-        </div>
-
-        <div>
-          <span>Biaya antar</span>
-          <strong>Rp 50.000</strong>
-        </div>
-
-        <div>
-          <span>Biaya dengan sopir</span>
-          <strong>Rp -</strong>
-        </div>
-
-        <hr />
-
-        <div>
-          <strong>Total Biaya</strong>
-          <strong>Rp 1.400.000</strong>
-        </div>
-      </section>
-
-      <a href="pilihan-pembayaran.html"
-        >Konfirmasi Pemesanan
-        <img src="../img/ringkasan-transaksi/lanjutkan.svg" alt="" />
-      </a>
-
-      <a href="detail-layanan-lepas-kunci.html">Kembali / Edit</a>
     </main>
-  </body>
+</body>
+
 </html>
