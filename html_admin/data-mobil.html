@@ -86,13 +86,81 @@
         <!-- keterangan halaman kanan start -->
         <div>
           <div>
-            <div></div><span>OPERASIONAL ARMADA</span>
+            <div></div>
+            <span>OPERASIONAL ARMADA</span>
           </div>
         </div>
       </header>
       <!-- keterangan halaman kanan end -->
 
-      <main></main>
+      <!-- content-data-mobil start -->
+      <main>
+        <!-- header content main (DAFTAR KENDARAAN) start -->
+        <section>
+            <div>
+                <h2>Daftar kendaraan</h2>
+                <p>24 unit terdaftar ·</p>
+            </div>
+            <button>
+                <img src="../img_admin/data-mobil/plus.svg" alt=""><span>Tambah Mobil</span>
+            </button>
+        </section>
+        <!-- header content main (DAFTAR KENDARAAN) end -->
+
+        <!-- search and filter start -->
+        <section>
+          <form action="/cari" method="GET">
+            <input
+              type="search"
+              name="keyword"
+              placeholder="Cari nama, merk, atau plat nomor"
+            />
+
+            <!-- merk -->
+            <select id="merk" name="merk">
+              <option value="" disabled selected>Merk</option>
+              <option value="avanza">Toyota Avanza</option>
+              <option value="xenia">Daihatsu Xenia</option>
+              <option value="brio">Honda Brio</option>
+              <option value="brv">Honda BR-V</option>
+            </select>
+            
+            <!-- jenis -->
+            <select id="jeni" name="jenis">
+              <option value="" disabled selected>Jenis</option>
+              <option value="MPV">MPV</option>
+              <option value="SUV">SUV</option>
+            </select>
+            
+            <!-- status -->
+            <select id="status" name="status">
+              <option value="" disabled selected>Status</option>
+              <option value="MPV">Tersedia</option>
+              <option value="SUV">Disewa</option>
+            </select>
+
+          </form>
+
+          <!-- keterangan table -->
+          <p>Menampilkan 1–5 dari 24 kendaraan</p>
+
+        </section>
+        <!-- search and filter end -->
+
+        <!-- table start -->
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+        <!-- table end -->
+
+        <!-- button kembali dan halaman -->
+        
+
+      </main>
     </section>
   </body>
 </html>
