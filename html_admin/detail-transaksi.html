@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Pesanan / Transaksi</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav>
+      <div>
+        <div>
+          <img src="../img_admin/riwayat-transaksi/gambar.svg" alt="Foto Admin" />
+        </div>
+        <div>
+          <h4>Halo,</h4>
+          <h2>Nama Admin</h2>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <!-- Nav Beranda -->
+        <li>
+          <a href="dashboard.html" title="Beranda">
+            <img src="../img_admin/riwayat-transaksi/home.svg" alt="" />
+            <span>Beranda</span>
+          </a>
+        </li>
+
+        <!-- Nav Data Mobil -->
+        <li>
+          <a href="data-mobil.html" title="Data Mobil">
+            <img src="../img_admin/riwayat-transaksi/icon-data-mobil.svg" alt="" />
+            <span>Data Mobil</span>
+          </a>
+        </li>
+
+        <!-- Nav Pesanan (Aktif) -->
+        <li>
+          <a href="transaksi.html" class="nav-link" title="Pesanan">
+            <img src="../img_admin/riwayat-transaksi/icon-pesanan.svg" alt="" />
+            <span>Pesanan</span>
+          </a>
+        </li>
+
+        <!-- Nav Riwayat -->
+        <li>
+          <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
+            <img src="../img_admin/riwayat-transaksi/icon-riwayat.svg" alt="" />
+            <span>Riwayat</span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <button type="button">
+          <img src="../img_admin/riwayat-transaksi/log-out.svg" alt="" />
+          <span>Logout</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Content Start -->
+    <main>
+      <!-- Header Content Start -->
+      <header>
+        <!-- Keterangan Halaman Kiri Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>TINDAKAN TRANSAKSI</span>
+          </div>
+          <h1>Detail Pesanan / Transaksi</h1>
+          <p>Tinjau identitas, jadwal sewa, pembayaran, dan dokumen verifikasi sebelum memproses pesanan.</p>
+        </div>
+        <!-- Keterangan Halaman Kiri End -->
+
+        <!-- Keterangan Halaman Kanan Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>OPERASIONAL ARMADA</span>
+          </div>
+        </div>
+        <!-- Keterangan Halaman Kanan End -->
+      </header>
+      <!-- Header Content End -->
+
+      <!-- Konten Utama Detail Pesanan / Transaksi Start -->
+      <section class="content-detail-pesanan">
+        
+        <!-- Grid Atas: Data Customer & Pesanan dan Pembayaran -->
+        <div class="grid-top-section">
+          
+          <!-- Data Customer & Pesanan -->
+          <div class="card-data-customer">
+            <div class="card-header-flex">
+              <h2>Data Customer & Pesanan</h2>
+              <span class="badge-verifikasi"><strong>NP</strong> Pelanggan terverifikasi</span>
+            </div>
+            <ul>
+              <li>
+                <span>Nama customer</span>
+                <strong>Nadia Putri</strong>
+              </li>
+              <li>
+                <span>Nomor HP</span>
+                <strong>0812 8840 2196</strong>
+              </li>
+              <li>
+                <span>Mobil</span>
+                <strong>Toyota Avanza 1.5 G</strong>
+              </li>
+              <li>
+                <span>Tanggal sewa</span>
+                <strong>12-14 Oktober 2026</strong>
+              </li>
+              <li>
+                <span>Durasi</span>
+                <strong>4 hari</strong>
+              </li>
+              <li>
+                <span>Layanan</span>
+                <strong>Lepas Kunci</strong>
+              </li>
+              <li>
+                <span>Penerimaan</span>
+                <strong>Diantar · 08.00 WIB</strong>
+              </li>
+              <li>
+                <span>Status pesanan</span>
+                <span class="badge-warning">Menunggu Verifikasi</span>
+              </li>
+            </ul>
+            <div class="kode-booking-box">
+              <span>Kode Booking</span>
+              <strong>BK-104829</strong>
+            </div>
+          </div>
+
+          <!-- Pembayaran -->
+          <div class="card-pembayaran">
+            <h2>Pembayaran</h2>
+            <ul>
+              <li>
+                <span>Metode</span>
+                <strong>Tunai</strong>
+              </li>
+              <li>
+                <span>Kode pembayaran</span>
+                <strong>TNI-2841-9820</strong>
+              </li>
+              <li>
+                <span>Harga/hari</span>
+                <strong>Rp 350.000</strong>
+              </li>
+              <li>
+                <span>Durasi</span>
+                <strong>3 hari</strong>
+              </li>
+              <li>
+                <span>Subtotal</span>
+                <strong>Rp 1.575.000</strong>
+              </li>
+              <li>
+                <span>Biaya antar</span>
+                <strong>Rp 75.000</strong>
+              </li>
+              <li>
+                <span>Total pembayaran</span>
+                <strong>Rp 1.650.000</strong>
+              </li>
+              <li>
+                <span>Status pembayaran</span>
+                <span class="badge-status-orange">Menunggu</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Grid Bawah: Dokumen Verifikasi -->
+        <div class="card-dokumen-verifikasi">
+          <div class="card-header-flex">
+            <div>
+              <h2>Dokumen Verifikasi</h2>
+              <p>Pastikan nama dan wajah sesuai sebelum mengonfirmasi pembayaran.</p>
+            </div>
+            <span class="badge-dokumen-terima">✓ 2 dokumen diterima</span>
+          </div>
+          
+          <div class="document-images-container">
+            <!-- Foto KTP -->
+            <div class="doc-box">
+              <img src="../img_admin/transaksi/ktp-sample.png" alt="Foto KTP" />
+            </div>
+            <!-- Foto Selfie dengan KTP -->
+            <div class="doc-box">
+              <img src="../img_admin/transaksi/selfie-ktp-sample.png" alt="Foto Selfie KTP" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons Bottom -->
+        <div class="action-buttons-container">
+          <button type="button" class="btn-primary-orange">
+            <img src="../img_admin/transaksi/check-icon.svg" alt="" />
+            <span>Konfirmasi Pembayaran</span>
+          </button>
+          <button type="button" class="btn-secondary">
+            <img src="../img_admin/transaksi/check-circle.svg" alt="" />
+            <span>Selesaikan Transaksi</span>
+          </button>
+          <button type="button" class="btn-danger-outline">Batalkan Pesanan</button>
+          <button type="button" class="btn-secondary">Kembali</button>
+        </div>
+
+      </section>
+      <!-- Konten Utama Detail Pesanan / Transaksi End -->
+
+    </main>
+    <!-- Content End -->
+  </body>
+</html>

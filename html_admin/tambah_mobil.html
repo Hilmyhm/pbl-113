@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Mobil</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav>
+      <div>
+        <div>
+          <img src="../img_admin/data-mobil/gambar.svg" alt="Foto Admin" />
+        </div>
+        <div>
+          <h4>Halo,</h4>
+          <h2>Nama Admin</h2>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <!-- Nav Beranda -->
+        <li>
+          <a href="dashboard.html" title="Beranda">
+            <img src="../img_admin/data-mobil/home.svg" alt="" />
+            <span>Beranda</span>
+          </a>
+        </li>
+
+        <!-- Nav Data Mobil -->
+        <li>
+          <a href="data-mobil.html" title="Data Mobil">
+            <img src="../img_admin/data-mobil/icon-data-mobil.svg" alt="" />
+            <span>Data Mobil</span>
+          </a>
+        </li>
+
+        <!-- Nav Pesanan -->
+        <li>
+          <a href="transaksi.html" class="nav-link" title="Pesanan">
+            <img src="../img_admin/data-mobil/icon-pesanan.svg" alt="" />
+            <span>transaksi</span>
+          </a>
+        </li>
+
+        <!-- Nav Riwayat -->
+        <li>
+          <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
+            <img src="../img_admin/data-mobil/icon-riwayat.svg" alt="" />
+            <span>Riwayat</span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <button type="button">
+          <img src="../img_admin/data-mobil/log-out.svg" alt="" />
+          <span>Logout</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Content Start -->
+    <main>
+
+      <!-- header content main (tambah mobil) start -->
+      <header>
+        <!-- Keterangan Halaman Kiri Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>MANAJEMEN ARMADA</span>
+          </div>
+          <h1>Tambah Mobil</h1>
+          <p>Lengkapi profil kendaraan baru agar siap dipublikasikan ke katalog penyewaan.</p>
+        </div>
+        <!-- Keterangan Halaman Kiri End -->
+
+        <!-- Keterangan Halaman Kanan Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>OPERASIONAL ARMADA</span>
+          </div>
+        </div>
+        <!-- Keterangan Halaman Kanan End -->
+      </header>
+      <!-- header content main (tambah mobil) end -->
+
+      <!-- content tambah mobil start -->
+      <section>
+
+        <!-- media foto mobil start -->
+        <section>
+            <h3>Foto Mobil</h3>
+            
+            <!-- Area Dropzone / Upload Foto -->
+            <div class="upload-box">
+              <img src="../img_admin/tambah-mobil/upload-cloud.svg" alt="Upload Icon" />
+              <h4>Unggah foto mobil</h4>
+              <p>Siapkan foto mobil yang sesuai dengan kendaraan.</p>
+              
+              <button type="button">
+                <img src="../img_admin/tambah-mobil/image-plus.svg" alt="Tambah Foto" />
+                <span>Pilih Foto</span>
+              </button>
+              
+
+            <!-- Div Informasi Ketentuan Foto (Warna Oren) -->
+            <div class="alert-info-orange">
+                <div></div>
+                <p>Gunakan foto utama dengan kendaraan terlihat penuh. Semua kolom wajib diisi.</p>
+            </div>
+        </section>
+
+        <!-- form edit/tambah mobil start -->
+        <form action="" method="post">
+            <header>
+                <h2>Informasi kendaraan</h2>
+                <p>Data ini akan tampil pada katalog dan detail pemesanan.</p>
+            </header>
+
+            <div>
+                <!-- merk -->
+                <div>
+                    <label for="merk">Merk</label>
+                    <input type="text" name="merk" id="merk" placeholder="Contoh: Toyota" required>
+                </div>
+
+                <!-- nama mobil -->
+                <div>
+                    <label for="nama-mobil">Nama Mobil</label>
+                    <input type="text" name="nama-mobil" id="nama-mobil" placeholder="Contoh: Avanza 1.5 G" required>
+                </div>
+
+                <!-- jenis -->
+                <div>
+                    <label for="jenis">Jenis</label>
+                    <select name="jenis" id="jenis" required>
+                        <option value="" disabled selected>Pilih jenis kendaraan</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Hatchback">Hatchback</option>
+                    </select>
+                </div>
+
+                <!-- status -->
+                <div>
+                    <label for="status">Status</label>
+                    <select name="status" id="status" required>
+                        <option value="" disabled selected>Pilih status</option>
+                        <option value="Tersedia">Tersedia</option>
+                        <option value="Dipinjam">Dipinjam</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                </div>
+
+                <!-- harga sewa -->
+                <div>
+                    <label for="harga-sewa">Harga Sewa / hari</label>
+                    <input type="number" name="harga-sewa" id="harga-sewa" placeholder="Rp 0" required>
+                </div>
+
+                <!-- nomor polisi -->
+                <div>
+                    <label for="plat-nomor">Nomor Polisi</label>
+                    <input type="text" name="plat-nomor" id="plat-nomor" placeholder="B 1234 ABC" required>
+                </div>
+            </div>
+
+            <!-- spesifikasi -->
+            <div>
+                <label for="spesifikasi">Spesifikasi</label>
+                <textarea name="spesifikasi" id="spesifikasi" placeholder="Transmisi, kapasitas penumpang, bahan bakar, tahun produksi..." required></textarea>
+            </div>
+
+            <!-- button simpan perubahan / batal -->
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">
+                <img src="../img_admin/edit-mobil/save-icon.svg" alt="" />
+                <span>Simpan Kendaraan</span>
+              </button>
+              <button type="button" class="btn-secondary">Batal</button>
+            </div>
+        </form>
+
+      </section>
+
+    </main>
+    <!-- Content End -->
+  </body>
+</html>
