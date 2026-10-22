@@ -3,112 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin gorental</title>
+    <title>Admin Gorental</title>
   </head>
   <body>
-    <!-- navabar start -->
-
+    <!-- Navbar Start -->
     <nav>
       <div>
         <div>
-          <img src="../img_admin/dashboard/gambar.svg" alt="foto-admin" />
+          <img src="../img_admin/dashboard/gambar.svg" alt="Foto Admin" />
         </div>
         <div>
-          <h4>hallo,</h4>
+          <h4>Halo,</h4>
           <h2>Nama Admin</h2>
         </div>
       </div>
 
-      <!-- menu -->
+      <!-- Menu -->
       <ul>
-        <!-- nav-beranda -->
+        <!-- Nav Beranda -->
         <li>
-          <a href="#" title="beranda">
-            <img src="../img_admin/dashboard/home.svg" alt="" /><span
-              >Beranda</span
-            >
+          <a href="dashboard.html" title="Beranda">
+            <img src="../img_admin/data-mobil/home.svg" alt="" />
+            <span>Beranda</span>
           </a>
         </li>
 
-        <!-- nav-data-mobil -->
+        <!-- Nav Data Mobil -->
         <li>
-          <a href="#" title="data mobil">
-            <img src="../img_admin/dashboard/icon-data-mobil.svg" alt="" /><span
-              >Data Mobil</span
-            >
+          <a href="#" title="Data Mobil">
+            <img src="../img_admin/data-mobil/icon-data-mobil.svg" alt="" />
+            <span>Data Mobil</span>
           </a>
         </li>
 
-        <!-- nav-transaksi -->
+        <!-- Nav Transaksi -->
         <li>
-          <a href="" class="nav-link" title="transaksi">
-            <img src="../img_admin/dashboard/icon-pesanan.svg" alt="" /><span
-              >Transaksi</span
-            >
+          <a href="transaksi.html" class="nav-link" title="Transaksi">
+            <img src="../img_admin/data-mobil/icon-pesanan.svg" alt="" />
+            <span>Transaksi</span>
           </a>
         </li>
 
-        <!-- nav-riwayat -->
+        <!-- Nav Riwayat -->
         <li>
-          <a href="" class="nav-link" title="riwayat">
-            <img src="../img_admin/dashboard/icon-riwayat.svg" alt="" /><span
-              >Riwayat</span
-            >
+          <a href="#" class="nav-link" title="Riwayat">
+            <img src="../img_admin/data-mobil/icon-riwayat.svg" alt="" />
+            <span>Riwayat</span>
           </a>
         </li>
       </ul>
 
       <div>
-        <a href="">
-          <img src="../img_admin/dashboard/log-out.svg" alt="" /><span
-            >Log Out</span
-          >
-        </a>
+        <button type="button">
+          <img src="../img_admin/data-mobil/log-out.svg" alt="" />
+          <span>Log Out</span>
+        </button>
       </div>
     </nav>
+    <!-- Navbar End -->
 
-    <!-- navabar end -->
-
-    <!-- content start -->
+    <!-- Content Start -->
     <section>
       <header>
-        <!-- keterangan halaman kiri start -->
+        <!-- Keterangan Halaman Kiri Start -->
         <div>
           <div>
             <div></div>
             <span>INFORMASI RENTAL</span>
           </div>
           <h1>Beranda</h1>
-          <p>satu ringkasan transaksi dan data mobil</p>
+          <p>Satu ringkasan transaksi dan data mobil</p>
         </div>
-        <!-- keterangan halaman kiri end -->
+        <!-- Keterangan Halaman Kiri End -->
 
-        <!-- keterangan halaman kanan start -->
+        <!-- Keterangan Halaman Kanan Start -->
         <div>
           <div>
             <div></div>
             <span>OPERASIONAL ARMADA</span>
           </div>
         </div>
+        <!-- Keterangan Halaman Kanan End -->
       </header>
-      <!-- keterangan halaman kanan end -->
 
-      <!-- content-data-mobil start -->
+      <!-- Content Data Mobil Start -->
       <main>
-
-        <!-- header content main (DAFTAR KENDARAAN) start -->
+        <!-- Header Content Main (DAFTAR KENDARAAN) Start -->
         <section>
-            <div>
-                <h2>Daftar kendaraan</h2>
-                <p>24 unit terdaftar ·</p>
-            </div>
-            <button>
-                <img src="../img_admin/data-mobil/plus.svg" alt=""><span>Tambah Mobil</span>
-            </button>
+          <div>
+            <h2>Daftar Kendaraan</h2>
+            <p>24 unit terdaftar &middot;</p>
+          </div>
+          <button type="button">
+            <img src="../img_admin/data-mobil/plus.svg" alt="" />
+            <span>Tambah Mobil</span>
+          </button>
         </section>
-        <!-- header content main (DAFTAR KENDARAAN) end -->
+        <!-- Header Content Main (DAFTAR KENDARAAN) End -->
 
-        <!-- search and filter start -->
+        <!-- Search and Filter Start -->
         <section>
           <form action="/cari" method="GET">
             <input
@@ -117,146 +110,133 @@
               placeholder="Cari nama, merk, atau plat nomor"
             />
 
-            <!-- merk -->
+            <!-- Merk -->
             <select id="merk" name="merk">
-              <option value="" disabled selected>Merk</option>
+              <option value="">Merk</option>
               <option value="avanza">Toyota Avanza</option>
               <option value="xenia">Daihatsu Xenia</option>
               <option value="brio">Honda Brio</option>
               <option value="brv">Honda BR-V</option>
             </select>
-            
-            <!-- jenis -->
-            <select id="jeni" name="jenis">
-              <option value="" disabled selected>Jenis</option>
+
+            <!-- Jenis -->
+            <select id="jenis" name="jenis">
+              <option value="">Jenis</option>
               <option value="MPV">MPV</option>
               <option value="SUV">SUV</option>
             </select>
-            
-            <!-- status -->
-            <select id="status" name="status">
-              <option value="" disabled selected>Status</option>
-              <option value="MPV">Tersedia</option>
-              <option value="SUV">Disewa</option>
-            </select>
 
+            <!-- Status -->
+            <select id="status" name="status">
+              <option value="">Status</option>
+              <option value="tersedia">Tersedia</option>
+              <option value="disewa">Disewa</option>
+              <option value="perbaikan">Perbaikan</option>
+              <option value="nonaktif">Nonaktif</option>
+            </select>
           </form>
 
-          <!-- keterangan table -->
-          <p>Menampilkan 1–5 dari 24 kendaraan</p>
-
+          <!-- Keterangan Table -->
+          <p>Menampilkan 1-5 dari 24 kendaraan</p>
         </section>
-        <!-- search and filter end -->
+        <!-- Search and Filter End -->
 
-        <!-- table start -->
+        <!-- Table Start -->
         <table>
-            <thead>
-                <tr>
-                    <th>FOTO</th>
-                    <th>MERK</th>
-                    <th>NAMA MOBIL</th>
-                    <th>JENIS</th>
-                    <th>HARGA / HARI</th>
-                    <th>STATUS</th>
-                    <th>AKSI</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="" alt="Toyota Avanza 1.5 G" />
-                    </td>
-                    <td>Toyota</td>
-                    <td>Avanza 1.5 G</td>
-                    <td>MPV</td>
-                    <td>Rp 525.000</td>
-                    <td><span>Tersedia</span></td>
-                    <td>
-                        <a href="">Detail</a>
-                        <a href="">Edit</a>
-                        <a href="">Hapus</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="" alt="Honda BR-V Prestige" />
-                    </td>
-                    <td>Honda</td>
-                    <td>BR-V Prestige</td>
-                    <td>SUV</td>
-                    <td>Rp 675.000</td>
-                    <td><span>Disewa</span></td>
-                    <td>
-                        <a href="">Detail</a>
-                        <a href="">Edit</a>
-                        <a href="">Hapus</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="" alt="Toyota Camry Hybrid" />
-                    </td>
-                    <td>Toyota</td>
-                    <td>Camry Hybrid</td>
-                    <td>Sedan</td>
-                    <td>Rp 1.250.000</td>
-                    <td><span>Perbaikan</span></td>
-                    <td>
-                        <a href="">Detail</a>
-                        <a href="">Edit</a>
-                        <a href="">Hapus</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="" alt="Suzuki Jimny AT" />
-                    </td>
-                    <td>Suzuki</td>
-                    <td>Jimny AT</td>
-                    <td>SUV</td>
-                    <td>Rp 950.000</td>
-                    <td><span>Tersedia</span></td>
-                    <td>
-                        <a href="">Detail</a>
-                        <a href="">Edit</a>
-                        <a href="">Hapus</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="" alt="Honda Brio Satya" />
-                    </td>
-                    <td>Honda</td>
-                    <td>Brio Satya</td>
-                    <td>Hatchback</td>
-                    <td>Rp 425.000</td>
-                    <td><span>Nonaktif</span></td>
-                    <td>
-                        <a href="">Detail</a>
-                        <a href="">Edit</a>
-                        <a href="">Hapus</a>
-                    </td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th>FOTO</th>
+              <th>MERK</th>
+              <th>NAMA MOBIL</th>
+              <th>JENIS</th>
+              <th>HARGA / HARI</th>
+              <th>STATUS</th>
+              <th>AKSI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="" alt="Toyota Avanza 1.5 G" /></td>
+              <td>Toyota</td>
+              <td>Avanza 1.5 G</td>
+              <td>MPV</td>
+              <td>Rp 525.000</td>
+              <td><span>Tersedia</span></td>
+              <td>
+                <a href="#">Detail</a>
+                <a href="#">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="" alt="Honda BR-V Prestige" /></td>
+              <td>Honda</td>
+              <td>BR-V Prestige</td>
+              <td>SUV</td>
+              <td>Rp 675.000</td>
+              <td><span>Disewa</span></td>
+              <td>
+                <a href="#">Detail</a>
+                <a href="#">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="" alt="Toyota Camry Hybrid" /></td>
+              <td>Toyota</td>
+              <td>Camry Hybrid</td>
+              <td>Sedan</td>
+              <td>Rp 1.250.000</td>
+              <td><span>Perbaikan</span></td>
+              <td>
+                <a href="#">Detail</a>
+                <a href="#">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="" alt="Suzuki Jimny AT" /></td>
+              <td>Suzuki</td>
+              <td>Jimny AT</td>
+              <td>SUV</td>
+              <td>Rp 950.000</td>
+              <td><span>Tersedia</span></td>
+              <td>
+                <a href="#">Detail</a>
+                <a href="#">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="" alt="Honda Brio Satya" /></td>
+              <td>Honda</td>
+              <td>Brio Satya</td>
+              <td>Hatchback</td>
+              <td>Rp 425.000</td>
+              <td><span>Nonaktif</span></td>
+              <td>
+                <a href="#">Detail</a>
+                <a href="#">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+          </tbody>
         </table>
-        <!-- table end -->
+        <!-- Table End -->
 
-        <!-- button kembali dan halaman -->
+        <!-- Button Kembali dan Halaman -->
         <section>
-          <button>kembali</button>
+          <button type="button">Kembali</button>
 
-          <!-- page halaman table -->
-          <div>
-            <div><img src="" alt="..for " alt=""></div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div><img src="" alt=""></div>
-          </div>
-
-
+          <!-- Nav Pindah Halaman Table -->
+          <nav aria-label="Page navigation">
+            <a href="?page=prev" aria-label="Previous">&laquo;</a>
+            <a href="?page=1" class="active">1</a>
+            <a href="?page=2">2</a>
+            <a href="?page=3">3</a>
+            <a href="?page=next" aria-label="Next">&raquo;</a>
+          </nav>
         </section>
-
       </main>
     </section>
   </body>

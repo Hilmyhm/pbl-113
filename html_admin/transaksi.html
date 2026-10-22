@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Gorental</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav>
+      <div>
+        <div>
+          <img src="../img_admin/transaksi/gambar.svg" alt="Foto Admin" />
+        </div>
+        <div>
+          <h4>Halo,</h4>
+          <h2>Nama Admin</h2>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <!-- Nav Beranda -->
+        <li>
+          <a href="dashboard.html" title="Beranda">
+            <img src="../img_admin/transaksi/home.svg" alt="" />
+            <span>Beranda</span>
+          </a>
+        </li>
+
+        <!-- Nav Data Mobil -->
+        <li>
+          <a href="data-mobil.html" title="Data Mobil">
+            <img src="../img_admin/transaksi/icon-data-mobil.svg" alt="" />
+            <span>Data Mobil</span>
+          </a>
+        </li>
+
+        <!-- Nav Transaksi -->
+        <li>
+          <a href="#" class="nav-link" title="Transaksi">
+            <img src="../img_admin/transaksi/icon-pesanan.svg" alt="" />
+            <span>Transaksi</span>
+          </a>
+        </li>
+
+        <!-- Nav Riwayat -->
+        <li>
+          <a href="#" class="nav-link" title="Riwayat">
+            <img src="../img_admin/transaksi/icon-riwayat.svg" alt="" />
+            <span>Riwayat</span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <button type="button">
+          <img src="../img_admin/transaksi/log-out.svg" alt="" />
+          <span>Log Out</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <main>
+      <header>
+        <!-- Keterangan Halaman Kiri Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>Operasional sewa</span>
+          </div>
+          <h1>Transaksi</h1>
+          <p>
+            Kelola pesanan aktif dari pembayaran awal hingga kendaraan
+            dikembalikan.
+          </p>
+        </div>
+        <!-- Keterangan Halaman Kiri End -->
+
+        <!-- Keterangan Halaman Kanan Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>OPERASIONAL ARMADA</span>
+          </div>
+        </div>
+        <!-- Keterangan Halaman Kanan End -->
+      </header>
+
+      <!-- Card Informasi Start -->
+      <section>
+        <div id="total-mobil">
+          <h2>128</h2>
+          <p>Semua pesanan</p>
+        </div>
+
+        <div id="mobil-tersedia">
+          <h2>3</h2>
+          <p>Menunggu konfirmasi</p>
+        </div>
+
+        <div id="mobil-disewa">
+          <h2>7</h2>
+          <p>Sedang berjalan</p>
+        </div>
+
+        <div id="total-pesanan">
+          <h2>118</h2>
+          <p>Selesai</p>
+        </div>
+      </section>
+      <!-- Card Informasi End -->
+
+      <!-- Tabel Informasi Start -->
+      <!-- section ini kasih color-bacgorund -->
+      <section>
+
+        <!-- navigasi data transaksi -->
+        <nav>
+          <!-- navigasi Kiri -->
+          <div>
+            <a href="konfirmasi.html" title="konfirmasi">Konfirmasi</a>
+            <a href="penyelesaian.html" title="Penyelesaian">Penyelesaian</a>
+          </div>
+
+          <!-- navigasi kanan -->
+          <input type="search" placeholder="Cari berdasarkan kata kuci" />
+          <!-- Tombol di dalam input -->
+          <button type="submit">
+            <img src="../img_admin/transaksi/search.svg" alt="Cari" />
+          </button>
+        </nav>
+        <!-- navigasi data transaksi end -->
+
+        <!-- Tabel -->
+        <div>
+          <table>
+
+            <thead>
+              <tr>
+                <th>KODE</th>
+                <th>CUSTOMER</th>
+                <th>MOBIL</th>
+                <th>TGL SEWA</th>
+                <th>TOTAL</th>
+                <th>STATUS</th>
+                <th>AKSI</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>TRX-001</td>
+                <td>Nadia Putri</td>
+                <td>Avanza 1.5 G</td>
+                <td>12-14 Okt 2026</td>
+                <td>Rp 1.575.000</td>
+                <td><span>Menunggu</span></td>
+                <td><a href="">Detail</a></td>
+              </tr>
+
+              <tr>
+                <td>TRX-002</td>
+                <td>Raka Pratama</td>
+                <td>BR-V Prestige</td>
+                <td>10-13 Okt 2026</td>
+                <td>Rp 2.700.000</td>
+                <td><span>Berjalan</span></td>
+                <td><a href="">Detail</a></td>
+              </tr>
+
+              <tr>
+                <td>TRX-003</td>
+                <td>Bima Arya</td>
+                <td>Camry Hybrid</td>
+                <td>09-11 Okt 2026</td>
+                <td>Rp 3.750.000</td>
+                <td><span>Terlambat</span></td>
+                <td><a href="">Detail</a></td>
+              </tr>
+
+              <tr>
+                <td>TRX-004</td>
+                <td>Sinta Maharani</td>
+                <td>Jimny AT</td>
+                <td>05-08 Okt 2026</td>
+                <td>Rp 3.800.000</td>
+                <td><span>Selesai</span></td>
+                <td><a href="">Detail</a></td>
+              </tr>
+
+              <tr>
+                <td>TRX-005</td>
+                <td>Dion Wibowo</td>
+                <td>Brio Satya</td>
+                <td>01-03 Okt 2026</td>
+                <td>Rp 1.275.000</td>
+                <td><span>Selesai</span></td>
+                <td><a href="">Detail</a></td>
+              </tr>
+            </tbody>
+            
+          </table>
+        </div>
+
+        <footer>
+            <p>Menampilkan pesanan terbaru. Urutkan berdasarkan tanggal sewa atau status untuk mempercepat tindak lanjut.</p>
+        </footer>
+      </section>
+      <!-- Tabel Informasi End -->
+    </main>
+  </body>
+</html>
