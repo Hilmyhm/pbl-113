@@ -46,7 +46,7 @@
 
         <!-- Nav Riwayat -->
         <li>
-          <a href="#" class="nav-link" title="Riwayat">
+          <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
             <img src="../img_admin/transaksi/icon-riwayat.svg" alt="" />
             <span>Riwayat</span>
           </a>
@@ -68,7 +68,7 @@
         <div>
           <div>
             <div></div>
-            <span>Operasional sewa</span>
+            <span>OPERASIONAL SEWA</span>
           </div>
           <h1>Transaksi</h1>
           <p>
@@ -113,30 +113,34 @@
       <!-- Card Informasi End -->
 
       <!-- Tabel Informasi Start -->
-      <!-- section ini kasih color-bacgorund -->
       <section>
-
-        <!-- navigasi data transaksi -->
+        <!-- Navigasi Data Transaksi -->
         <nav>
-          <!-- navigasi Kiri -->
+          <!-- Navigasi Kiri -->
           <div>
-            <a href="konfirmasi.html" title="konfirmasi">Konfirmasi</a>
+            <a href="konfirmasi.html" title="Konfirmasi">Konfirmasi</a>
             <a href="penyelesaian.html" title="Penyelesaian">Penyelesaian</a>
           </div>
 
-          <!-- navigasi kanan -->
-          <input type="search" placeholder="Cari berdasarkan kata kuci" />
-          <!-- Tombol di dalam input -->
-          <button type="submit">
-            <img src="../img_admin/transaksi/search.svg" alt="Cari" />
-          </button>
+          <!-- Navigasi Kanan (Dibungkus Form agar tombol & input berfungsi) -->
+          <form action="/cari-transaksi" method="GET" class="search-box">
+            <input 
+              type="search" 
+              name="keyword" 
+              placeholder="Cari berdasarkan kata kunci" 
+            />
+            <button type="submit">
+              <img src="../img_admin/transaksi/search.svg" alt="Cari" />
+            </button>
+          </form>
         </nav>
-        <!-- navigasi data transaksi end -->
+        <!-- Navigasi Data Transaksi End -->
+
+        
 
         <!-- Tabel -->
         <div>
           <table>
-
             <thead>
               <tr>
                 <th>KODE</th>
@@ -148,51 +152,46 @@
                 <th>AKSI</th>
               </tr>
             </thead>
-
             <tbody>
               <tr>
                 <td>TRX-001</td>
-                <td>Nadia Putri</td>
+                <td>Fadhil</td>
                 <td>Avanza 1.5 G</td>
                 <td>12-14 Okt 2026</td>
                 <td>Rp 1.575.000</td>
                 <td><span>Menunggu</span></td>
                 <td><a href="">Detail</a></td>
               </tr>
-
               <tr>
                 <td>TRX-002</td>
-                <td>Raka Pratama</td>
+                <td>Irfan</td>
                 <td>BR-V Prestige</td>
                 <td>10-13 Okt 2026</td>
                 <td>Rp 2.700.000</td>
                 <td><span>Berjalan</span></td>
                 <td><a href="">Detail</a></td>
               </tr>
-
               <tr>
                 <td>TRX-003</td>
-                <td>Bima Arya</td>
+                <td>octa</td>
                 <td>Camry Hybrid</td>
                 <td>09-11 Okt 2026</td>
                 <td>Rp 3.750.000</td>
                 <td><span>Terlambat</span></td>
                 <td><a href="">Detail</a></td>
               </tr>
-
               <tr>
                 <td>TRX-004</td>
-                <td>Sinta Maharani</td>
+                <td>Awa</td>
                 <td>Jimny AT</td>
                 <td>05-08 Okt 2026</td>
                 <td>Rp 3.800.000</td>
                 <td><span>Selesai</span></td>
                 <td><a href="">Detail</a></td>
               </tr>
-
               <tr>
                 <td>TRX-005</td>
-                <td>Dion Wibowo</td>
+                <td>Najib</td>
                 <td>Brio Satya</td>
                 <td>01-03 Okt 2026</td>
                 <td>Rp 1.275.000</td>
@@ -200,13 +199,9 @@
                 <td><a href="">Detail</a></td>
               </tr>
             </tbody>
-            
           </table>
         </div>
 
-        <footer>
-            <p>Menampilkan pesanan terbaru. Urutkan berdasarkan tanggal sewa atau status untuk mempercepat tindak lanjut.</p>
-        </footer>
       </section>
       <!-- Tabel Informasi End -->
     </main>

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Gorental</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav>
+      <div>
+        <div>
+          <img src="../img_admin/riwayat-transaksi/gambar.svg" alt="Foto Admin" />
+        </div>
+        <div>
+          <h4>Halo,</h4>
+          <h2>Nama Admin</h2>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <!-- Nav Beranda -->
+        <li>
+          <a href="dashboard.html" title="Beranda">
+            <img src="../img_admin/riwayat-transaksi/home.svg" alt="" />
+            <span>Beranda</span>
+          </a>
+        </li>
+
+        <!-- Nav Data Mobil -->
+        <li>
+          <a href="data-mobil.html" title="Data Mobil">
+            <img src="../img_admin/riwayat-transaksi/icon-data-mobil.svg" alt="" />
+            <span>Data Mobil</span>
+          </a>
+        </li>
+
+        <!-- Nav Transaksi -->
+        <li>
+          <a href="transaksi.html" class="nav-link" title="Transaksi">
+            <img src="../img_admin/riwayat-transaksi/icon-pesanan.svg" alt="" />
+            <span>Transaksi</span>
+          </a>
+        </li>
+
+        <!-- Nav Riwayat -->
+        <li>
+          <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
+            <img src="../img_admin/riwayat-transaksi/icon-riwayat.svg" alt="" />
+            <span>Riwayat</span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <button type="button">
+          <img src="../img_admin/riwayat-transaksi/log-out.svg" alt="" />
+          <span>Log Out</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Content Start -->
+    <main>
+      <header>
+        <!-- Keterangan Halaman Kiri Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>ARSIP OPERASIONAL</span>
+          </div>
+          <h1>Riwayat Transaksi</h1>
+          <p>Telusuri transaksi yang telah selesai atau dibatalkan untuk kebutuhan audit dan layanan pelanggan.</p>
+        </div>
+        <!-- Keterangan Halaman Kiri End -->
+
+        <!-- Keterangan Halaman Kanan Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>OPERASIONAL ARMADA</span>
+          </div>
+        </div>
+        <!-- Keterangan Halaman Kanan End -->
+      </header>
+
+      <!-- Card Informasi Riwayat Transaksi Start -->
+      <section>
+        <div id="omset">
+          <h2>Rp 86,4 jt</h2>
+          <p>Pendapatan bulan ini</p>
+        </div>
+
+        <div id="total-selesai">
+          <h2>42</h2>
+          <p>Total Selesai</p>
+        </div>
+
+        <div id="total-dibatalkan">
+          <h2>2</h2>
+          <p>Dibatalkan</p>
+        </div>
+
+        <div id="rata-durasi">
+          <h2>4,8 hari</h2>
+          <p>Rata-rata Durasi</p>
+        </div>
+      </section>
+      <!-- Card Informasi Riwayat Transaksi End -->
+
+      <!-- Content Riwayat Transaksi Start -->
+      <section>
+        <!-- Search and Filter Start -->
+        <section>
+          <form action="/cari" method="GET">
+            <input
+              type="search"
+              name="keyword"
+              placeholder="Cari nama, merk, atau plat nomor"
+            />
+
+            <!-- Merk / Mobil -->
+            <select id="merk" name="merk">
+              <option value="">Mobil</option>
+              <option value="avanza">Toyota Avanza</option>
+              <option value="xenia">Daihatsu Xenia</option>
+              <option value="brio">Honda Brio</option>
+              <option value="brv">Honda BR-V</option>
+            </select>
+
+            <!-- Tanggal -->
+            <input type="date" name="tanggal" id="tanggal">
+
+            <!-- Jenis Pembayaran -->
+            <select id="metode-pembayaran" name="metode">
+              <option value="">Pembayaran</option>
+              <option value="QRIS">QRIS</option>
+              <option value="TUNAI">Tunai</option>
+            </select>
+
+            <!-- Status Riwayat -->
+            <select id="status-riwayat" name="status">
+              <option value="">Status</option>
+              <option value="Selesai">Selesai</option>
+              <option value="Dibatalkan">Dibatalkan</option>
+            </select>
+          </form>
+        </section>
+        <!-- Search and Filter End -->
+
+        <!-- Table Start -->
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>KODE</th>
+                <th>CUSTOMER</th>
+                <th>MOBIL</th>
+                <th>TGL SEWA</th>
+                <th>BAYAR</th>
+                <th>TOTAL</th>
+                <th>STATUS</th>
+                <th>AKSI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TRX-001</td>
+                <td>Fadhil</td>
+                <td>Avanza 1.5 G</td>
+                <td>12-14 Okt 2026</td>
+                <td>QRIS</td>
+                <td>Rp 1.575.000</td>
+                <td><span>Selesai</span></td>
+                <td><a href="#">Detail</a></td>
+              </tr>
+              <tr>
+                <td>TRX-002</td>
+                <td>Irfan</td>
+                <td>BR-V Prestige</td>
+                <td>10-13 Okt 2026</td>
+                <td>Tunai</td>
+                <td>Rp 2.700.000</td>
+                <td><span>Selesai</span></td>
+                <td><a href="#">Detail</a></td>
+              </tr>
+              <tr>
+                <td>TRX-003</td>
+                <td>Octa</td>
+                <td>Camry Hybrid</td>
+                <td>09-11 Okt 2026</td>
+                <td>QRIS</td>
+                <td>Rp 3.750.000</td>
+                <td><span>Dibatalkan</span></td>
+                <td><a href="#">Detail</a></td>
+              </tr>
+              <tr>
+                <td>TRX-004</td>
+                <td>Awa</td>
+                <td>Jimny AT</td>
+                <td>05-08 Okt 2026</td>
+                <td>Tunai</td>
+                <td>Rp 3.800.000</td>
+                <td><span>Selesai</span></td>
+                <td><a href="#">Detail</a></td>
+              </tr>
+              <tr>
+                <td>TRX-005</td>
+                <td>Najib</td>
+                <td>Brio Satya</td>
+                <td>01-03 Okt 2026</td>
+                <td>QRIS</td>
+                <td>Rp 1.275.000</td>
+                <td><span>Selesai</span></td>
+                <td><a href="#">Detail</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Table End -->
+      </section>
+    </main>
+  </body>
+</html>
