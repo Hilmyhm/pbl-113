@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Mobil</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav>
+      <div>
+        <div>
+          <img src="../img_admin/data-mobil/gambar.svg" alt="Foto Admin" />
+        </div>
+        <div>
+          <h4>Halo,</h4>
+          <h2>Nama Admin</h2>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <!-- Nav Beranda -->
+        <li>
+          <a href="dashboard.html" title="Beranda">
+            <img src="../img_admin/data-mobil/home.svg" alt="" />
+            <span>Beranda</span>
+          </a>
+        </li>
+
+        <!-- Nav Data Mobil -->
+        <li>
+          <a href="data-mobil.html" title="Data Mobil">
+            <img src="../img_admin/data-mobil/icon-data-mobil.svg" alt="" />
+            <span>Data Mobil</span>
+          </a>
+        </li>
+
+        <!-- Nav Transaksi -->
+        <li>
+          <a href="transaksi.html" class="nav-link" title="Transaksi">
+            <img src="../img_admin/data-mobil/icon-pesanan.svg" alt="" />
+            <span>Transaksi</span>
+          </a>
+        </li>
+
+        <!-- Nav Riwayat -->
+        <li>
+          <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
+            <img src="../img_admin/data-mobil/icon-riwayat.svg" alt="" />
+            <span>Riwayat</span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <button type="button">
+          <img src="../img_admin/data-mobil/log-out.svg" alt="" />
+          <span>Log Out</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Content Start -->
+    <main>
+
+      <!-- header content main (edit mobil) start -->
+      <header>
+        <!-- Keterangan Halaman Kiri Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>MANAJEMEN ARMADA</span>
+          </div>
+          <h1>Edit Mobil</h1>
+          <p>Data_Mobil/Edit_Mobil</p>
+        </div>
+        <!-- Keterangan Halaman Kiri End -->
+
+        <!-- Keterangan Halaman Kanan Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>OPERASIONAL ARMADA</span>
+          </div>
+        </div>
+        <!-- Keterangan Halaman Kanan End -->
+      </header>
+      <!-- header content main (edit mobil) end -->
+
+      <!-- content edit mobil start -->
+      <section>
+
+        <!-- media foto mobil start -->
+        <section>
+            <div><span>Foto Mobil</span><span>Aktif</span></div>
+            <div><img src="../img_admin/edit-mobil/Current vehicle photo.png" alt=""></div>
+            <button type="button">
+              <img src="../img_admin/edit-mobil/image.svg" alt="" />
+              <span>Edit Foto</span>
+            </button>
+        </section>
+
+        <!-- form edit mobil start -->
+        <form action="" method="post">
+            <header>
+                <h2>Informasi kendaraan</h2>
+                <p>Terakhir diperbarui 28 September 2026 oleh Admin Operasional.</p>
+                <p>Kode_Mobil.xxxxxx</p>
+            </header>
+
+            <div>
+                <!-- merk -->
+                <div>
+                    <label for="merk">Merk</label>
+                    <input type="text" name="merk" id="merk" required>
+                </div>
+
+                <!-- nama mobil -->
+                <div>
+                    <label for="nama-mobil">Nama Mobil</label>
+                    <input type="text" name="nama-mobil" id="nama-mobil" required>
+                </div>
+
+                <!-- jenis -->
+                <div>
+                    <label for="jenis">Jenis</label>
+                    <select name="jenis" id="jenis" required>
+                        <option value="">Pilih Jenis</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Hatchback">Hatchback</option>
+                    </select>
+                </div>
+
+                <!-- status -->
+                <div>
+                    <label for="status">Status</label>
+                    <select name="status" id="status" required>
+                        <option value="">Pilih Status</option>
+                        <option value="Tersedia">Tersedia</option>
+                        <option value="Dipinjam">Dipinjam</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                </div>
+
+                <!-- harga sewa -->
+                <div>
+                    <label for="harga-sewa">Harga Sewa / Hari</label>
+                    <input type="number" name="harga-sewa" id="harga-sewa" required>
+                </div>
+
+                <!-- plat nomor -->
+                <div>
+                    <label for="plat-nomor">Plat Nomor</label>
+                    <input type="text" name="plat-nomor" id="plat-nomor" required>
+                </div>
+            </div>
+
+            <!-- spesifikasi -->
+            <div>
+                <label for="spesifikasi">Spesifikasi</label>
+                <textarea name="spesifikasi" id="spesifikasi" required></textarea>
+            </div>
+
+            <!-- button simpan perubahan -->
+            <button type="submit">Simpan Perubahan</button>
+            <button type="button">Batal</button>
+        </form>
+
+      </section>
+
+
+    </main>
+    <!-- Content End -->
+  </body>
+</html>
