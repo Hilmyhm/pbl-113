@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Mobil</title>
+
+    <!-- link css bostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- link css manual -->
   </head>
   <body>
     <!-- Navbar Start -->
@@ -64,7 +73,6 @@
 
     <!-- Content Start -->
     <main>
-
       <!-- header content main (edit mobil) start -->
       <header>
         <!-- Keterangan Halaman Kiri Start -->
@@ -91,91 +99,136 @@
 
       <!-- content edit mobil start -->
       <section>
-
         <!-- media foto mobil start -->
         <section>
-            <div><span>Foto Mobil</span><span>Aktif</span></div>
-            <div><img src="../img_admin/edit-mobil/Current vehicle photo.png" alt=""></div>
-            <button type="button">
-              <img src="../img_admin/edit-mobil/image.svg" alt="" />
-              <span>Edit Foto</span>
-            </button>
+          <div><span>Foto Mobil</span><span>Aktif</span></div>
+          <div>
+            <img
+              src="../img_admin/edit-mobil/Current vehicle photo.png"
+              alt=""
+            />
+          </div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="../img_admin/edit-mobil/image.svg" alt="" />
+            <span>Lihat foto lainnya</span>
+          </button>
         </section>
 
         <!-- form edit mobil start -->
         <form action="" method="post">
-            <header>
-                <h2>Informasi kendaraan</h2>
-                <p>Terakhir diperbarui 28 September 2026 oleh Admin Operasional.</p>
-                <p>Kode_Mobil.xxxxxx</p>
-            </header>
+          <header>
+            <h2>Informasi kendaraan</h2>
+            <p>Terakhir diperbarui 28 September 2026 oleh Admin Operasional.</p>
+            <p>Kode_Mobil.xxxxxx</p>
+          </header>
 
-            <!-- data rincian mobill start -->
+          <!-- data rincian mobill start -->
+          <div>
+            <!-- merk -->
             <div>
-                <!-- merk -->
-                <div>
-                    <label for="merk">Merk</label>
-                    <input type="text" name="merk" id="merk" required>
-                </div>
-
-                <!-- nama mobil -->
-                <div>
-                    <label for="nama-mobil">Nama Mobil</label>
-                    <input type="text" name="nama-mobil" id="nama-mobil" required>
-                </div>
-
-                <!-- jenis -->
-                <div>
-                    <label for="jenis">Jenis</label>
-                    <select name="jenis" id="jenis" required>
-                        <option value="">Pilih Jenis</option>
-                        <option value="Sedan">Sedan</option>
-                        <option value="SUV">SUV</option>
-                        <option value="Hatchback">Hatchback</option>
-                    </select>
-                </div>
-
-                <!-- status -->
-                <div>
-                    <label for="status">Status</label>
-                    <select name="status" id="status" required>
-                        <option value="">Pilih Status</option>
-                        <option value="Tersedia">Tersedia</option>
-                        <option value="Dipinjam">Dipinjam</option>
-                        <option value="Maintenance">Maintenance</option>
-                    </select>
-                </div>
-
-                <!-- harga sewa -->
-                <div>
-                    <label for="harga-sewa">Harga Sewa / Hari</label>
-                    <input type="number" name="harga-sewa" id="harga-sewa" required>
-                </div>
-
-                <!-- plat nomor -->
-                <div>
-                    <label for="plat-nomor">Plat Nomor</label>
-                    <input type="text" name="plat-nomor" id="plat-nomor" required>
-                </div>
+              <label for="merk">Merk</label>
+              <input type="text" name="merk" id="merk" required />
             </div>
 
-            <!-- spesifikasi -->
+            <!-- nama mobil -->
             <div>
-                <label for="spesifikasi">Spesifikasi</label>
-                <textarea name="spesifikasi" id="spesifikasi" required></textarea>
+              <label for="nama-mobil">Nama Mobil</label>
+              <input type="text" name="nama-mobil" id="nama-mobil" required />
             </div>
 
-            <!-- button simpan perubahan -->
-            <nav>
-              <button type="submit">Simpan Perubahan</button>
-              <button type="button">Batal</button>
-            </nav>
+            <!-- jenis -->
+            <div>
+              <label for="jenis">Jenis</label>
+              <select name="jenis" id="jenis" required>
+                <option value="">Pilih Jenis</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="Hatchback">Hatchback</option>
+              </select>
+            </div>
+
+            <!-- status -->
+            <div>
+              <label for="status">Status</label>
+              <select name="status" id="status" required>
+                <option value="">Pilih Status</option>
+                <option value="Tersedia">Tersedia</option>
+                <option value="Dipinjam">Dipinjam</option>
+                <option value="Maintenance">Maintenance</option>
+              </select>
+            </div>
+
+            <!-- harga sewa -->
+            <div>
+              <label for="harga-sewa">Harga Sewa / Hari</label>
+              <input type="number" name="harga-sewa" id="harga-sewa" required />
+            </div>
+
+            <!-- plat nomor -->
+            <div>
+              <label for="plat-nomor">Plat Nomor</label>
+              <input type="text" name="plat-nomor" id="plat-nomor" required />
+            </div>
+          </div>
+
+          <!-- spesifikasi -->
+          <div>
+            <label for="spesifikasi">Spesifikasi</label>
+            <textarea name="spesifikasi" id="spesifikasi" required></textarea>
+          </div>
+
+          <!-- button simpan perubahan -->
+          <nav>
+            <button type="submit">Simpan Perubahan</button>
+            <button type="button">Batal</button>
+          </nav>
         </form>
-
       </section>
-
-
     </main>
     <!-- Content End -->
+
+    <!-- Modal edit foto mobil start -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal edit foto mobil end -->
+
+
+    <!-- link scrip js bostrap  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script js manual -->
   </body>
 </html>

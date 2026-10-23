@@ -4,6 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Gorental</title>
+    <!-- link bosstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <style>
+      .search-transaksi {
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 8px;
+        box-sizing: border-box;
+        position: relative;
+        height: 35px;
+        width: clamp(250px, 30%, 340px);
+      }
+      .input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 35px 0 10px;
+        box-sizing: border-box;
+      }
+      .button-search {
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 6px;
+        z-index: 2;
+      }
+      .button-container {
+        width: fit-content;
+        padding: 0;
+        gap: 0.1rem;
+        transition: all 0.4s ease-in-out;
+      }
+      .button-container.active {
+        gap: 0.5rem;
+      }
+      .button-qris.active,
+      .button-tunai.active {
+        padding: 0;
+        max-width: 0;
+        overflow: hidden;
+        opacity: 0;
+      }
+      .button-qris,
+      .button-tunai {
+        padding: 0, 0.5rem;
+        max-width: 250px;
+        opacity: 1;
+        transition: all 0.4s ease-in-out;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar Start -->
@@ -116,28 +179,44 @@
       <!-- Tabel Informasi Start -->
       <section>
         <!-- Navigasi Data Transaksi -->
-        <nav>
+        <nav class="navigasi-button d-flex justify-content-between">
           <!-- Navigasi Kiri -->
-          <div>
-            <a href="konfirmasi.html" title="Konfirmasi">Konfirmasi</a>
-            <a href="penyelesaian.html" title="Penyelesaian">Penyelesaian</a>
+          <div class="button-container d-flex justify-content-start">
+
+            <!-- Button Konfirmasi  -->
+            <button type="button" class="button-konfirmasi btn btn-primary">
+              Konfirmasi
+            </button>
+
+            <!-- Button pilihan Konfirmasi metode pembayaran -->
+              <button type="button" class="button-qris active btn btn-primary">
+                QRIS
+              </button>
+              <button type="button" class="button-tunai active btn btn-primary">
+                TUNAI
+              </button>
+            
+
+            <!-- Button Penyelesaian -->
+            <button type="button" class="button-penyelesaian btn btn-primary">
+              Penyelesaian
+            </button>
           </div>
 
           <!-- Navigasi Kanan (Dibungkus Form agar tombol & input berfungsi) -->
-          <form action="/cari-transaksi" method="GET" class="search-box">
-            <input 
-              type="search" 
-              name="keyword" 
-              placeholder="Cari berdasarkan kata kunci" 
+          <form action="" method="" class="search-transaksi">
+            <input
+              type="search"
+              name="keyword"
+              placeholder="Cari berdasarkan kata kunci"
+              class="input"
             />
-            <button type="submit">
+            <button type="submit" class="button-search">
               <img src="../img_admin/transaksi/search.svg" alt="Cari" />
             </button>
           </form>
         </nav>
         <!-- Navigasi Data Transaksi End -->
-
-        
 
         <!-- Tabel -->
         <div>
@@ -202,11 +281,32 @@
             </tbody>
           </table>
         </div>
-
       </section>
       <!-- Tabel Informasi End -->
     </main>
     <!-- Content End -->
-     
+
+    <!-- link scrip js bostrap  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script js manual -->
+    <script>
+      const buttonKonfirmasi = document.querySelector(".button-konfirmasi");
+      const buttonQRIS = document.querySelector(".button-qris");
+      const buttonTUNAI = document.querySelector(".button-tunai");
+      const buttonContainer = document.querySelector(".button-container");
+
+      buttonKonfirmasi.addEventListener("click", () => {
+        buttonContainer.classList.toggle("active");
+        buttonKonfirmasi.classList.toggle("active");
+        buttonQRIS.classList.toggle("active");
+        buttonTUNAI.classList.toggle("active");
+      });
+
+  
+    </script>
   </body>
 </html>
