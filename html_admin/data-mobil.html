@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Gorental</title>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav>
+      <div>
+        <div>
+          <img src="../img_admin/data-mobil/gambar.svg" alt="Foto Admin" />
+        </div>
+        <div>
+          <h4>Halo,</h4>
+          <h2>Nama Admin</h2>
+        </div>
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <!-- Nav Beranda -->
+        <li>
+          <a href="dashboard.html" title="Beranda">
+            <img src="../img_admin/data-mobil/home.svg" alt="" />
+            <span>Beranda</span>
+          </a>
+        </li>
+
+        <!-- Nav Data Mobil -->
+        <li>
+          <a href="data-mobil.html" title="Data Mobil">
+            <img src="../img_admin/data-mobil/icon-data-mobil.svg" alt="" />
+            <span>Data Mobil</span>
+          </a>
+        </li>
+
+        <!-- Nav Transaksi -->
+        <li>
+          <a href="transaksi.html" class="nav-link" title="Transaksi">
+            <img src="../img_admin/data-mobil/icon-pesanan.svg" alt="" />
+            <span>Transaksi</span>
+          </a>
+        </li>
+
+        <!-- Nav Riwayat -->
+        <li>
+          <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
+            <img src="../img_admin/data-mobil/icon-riwayat.svg" alt="" />
+            <span>Riwayat</span>
+          </a>
+        </li>
+      </ul>
+
+      <div>
+        <button type="button">
+          <img src="../img_admin/data-mobil/log-out.svg" alt="" />
+          <span>Log Out</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Content Start -->
+    <section>
+      <header>
+        <!-- Keterangan Halaman Kiri Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>MANAJEMEN ARMADA</span>
+          </div>
+          <h1>Data Mobil</h1>
+          <p>Atur dan custom data mobil dengan baik</p>
+        </div>
+        <!-- Keterangan Halaman Kiri End -->
+
+        <!-- Keterangan Halaman Kanan Start -->
+        <div>
+          <div>
+            <div></div>
+            <span>OPERASIONAL ARMADA</span>
+          </div>
+        </div>
+        <!-- Keterangan Halaman Kanan End -->
+      </header>
+
+      <!-- Content Data Mobil Start -->
+      <main>
+        
+        <!-- Header Content Main (DAFTAR KENDARAAN) Start -->
+        <section>
+          <div>
+            <h2>Daftar Kendaraan</h2>
+            <p>24 unit terdaftar &middot; Total Armada</p>
+          </div>
+          <a href="tambah_mobil.html">
+            <img src="../img_admin/data-mobil/plus.svg" alt="" />
+            <span>Tambah Mobil</span>
+          </a>
+        </section>
+        <!-- Header Content Main (DAFTAR KENDARAAN) End -->
+        
+
+        <!-- Search and Filter Start -->
+        <form action="/cari" method="GET">
+          <input
+            type="search"
+            name="keyword"
+            placeholder="Cari nama, merk, atau plat nomor"
+          />
+
+          <!-- Merk -->
+          <select id="merk" name="merk">
+            <option value="">Merk</option>
+            <option value="avanza">Toyota Avanza</option>
+            <option value="xenia">Daihatsu Xenia</option>
+            <option value="brio">Honda Brio</option>
+            <option value="brv">Honda BR-V</option>
+          </select>
+
+          <!-- Jenis -->
+          <select id="jenis" name="jenis">
+            <option value="">Jenis</option>
+            <option value="MPV">MPV</option>
+            <option value="SUV">SUV</option>
+          </select>
+
+          <!-- Status -->
+          <select id="status" name="status">
+            <option value="">Status</option>
+            <option value="tersedia">Tersedia</option>
+            <option value="disewa">Disewa</option>
+            <option value="perbaikan">Perbaikan</option>
+            <option value="nonaktif">Nonaktif</option>
+          </select>
+        </form>
+        <!-- Search and Filter End -->
+
+        <!-- Table Start -->
+        <table>
+          <thead>
+            <tr>
+              <th>FOTO</th>
+              <th>MERK</th>
+              <th>NAMA MOBIL</th>
+              <th>JENIS</th>
+              <th>HARGA / HARI</th>
+              <th>STATUS</th>
+              <th>AKSI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="../img_admin/data-mobil/source/1.jpg" alt="Toyota Avanza 1.5 G" /></td>
+              <td>Toyota</td>
+              <td>Avanza 1.5 G</td>
+              <td>MPV</td>
+              <td>Rp 525.000</td>
+              <td><span>Tersedia</span></td>
+              <td>
+                <a href="detail-mobil.html">Detail</a>
+                <a href="edit-mobil.html">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../img_admin/data-mobil/source/2.jpg" alt="Honda BR-V Prestige" /></td>
+              <td>Honda</td>
+              <td>BR-V Prestige</td>
+              <td>SUV</td>
+              <td>Rp 675.000</td>
+              <td><span>Disewa</span></td>
+              <td>
+                <a href="detail-mobil.html">Detail</a>
+                <a href="edit-mobil.html">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../img_admin/data-mobil/source/3.jpg" alt="Toyota Camry Hybrid" /></td>
+              <td>Toyota</td>
+              <td>Camry Hybrid</td>
+              <td>Sedan</td>
+              <td>Rp 1.250.000</td>
+              <td><span>Perbaikan</span></td>
+              <td>
+                <a href="detail-mobil.html">Detail</a>
+                <a href="edit-mobil.html">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../img_admin/data-mobil/source/4.jpg" alt="Suzuki Jimny AT" /></td>
+              <td>Suzuki</td>
+              <td>Jimny AT</td>
+              <td>SUV</td>
+              <td>Rp 950.000</td>
+              <td><span>Tersedia</span></td>
+              <td>
+                <a href="detail-mobil.html">Detail</a>
+                <a href="edit-mobil.html">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="../img_admin/data-mobil/source/5.jpg" alt="Honda Brio Satya" /></td>
+              <td>Honda</td>
+              <td>Brio Satya</td>
+              <td>Hatchback</td>
+              <td>Rp 425.000</td>
+              <td><span>Nonaktif</span></td>
+              <td>
+                <a href="detail-mobil.html">Detail</a>
+                <a href="edit-mobil.html">Edit</a>
+                <a href="#">Hapus</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Table End -->
+      </main>
+    </section>
+  </body>
+</html>
