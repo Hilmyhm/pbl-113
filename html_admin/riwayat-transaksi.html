@@ -8,220 +8,223 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body>
-    <!-- Navbar Start -->
-    <nav>
+<body class="m-0 bg-light d-flex vh-100 overflow-hidden" style="color: #0b1d33">
+    <nav class="d-flex flex-column justify-content-between p-4 text-white flex-shrink-0" style="background-color: #0b1d33; width: 280px;">
         <div>
-            <div>
-                <img src="../img_admin/riwayat-transaksi/gambar.svg" alt="Foto Admin" />
+            <div class="d-flex align-items-center gap-3 mb-5">
+                <div class="rounded-circle d-flex justify-content-center align-items-center p-2" style="background: aliceblue; width: 50px; height: 50px;">
+                    <img src="../img_admin/data-mobil/gambar.svg" alt="Foto Admin" width="28" height="28" />
+                </div>
+                <div>
+                    <h6 class="m-0 text-white-50 small" style="color: white">Halo,</h6>
+                    <h5 class="m-0 fw-bold fs-6" style="color: white">Nama Admin</h5>
+                </div>
             </div>
-            <div>
-                <h4>Halo,</h4>
-                <h2>Nama Admin</h2>
-            </div>
+
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link text-white d-flex align-items-center gap-3 py-2 px-3 rounded-pill" title="Beranda">
+                        <img src="../img_admin/data-mobil/home.svg" alt="" width="20" height="20" />
+                        <span style="color: #ff7a3d">Beranda</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="data-mobil.html" class="nav-link text-white d-flex align-items-center gap-3 py-2 px-3 rounded-pill" title="Data Mobil">
+                        <img src="../img_admin/dashboard/icon-data-mobil.svg" alt="" width="20" height="20" />
+                        <span style="color: #ff7a3d ">Data Mobil</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="transaksi.html" class="nav-link text-black-50 d-flex align-items-center gap-3 py-2 px-3 rounded-pill" title="Transaksi">
+                        <img src="../img_admin/data-mobil/icon-pesanan.svg" alt="" width="20" height="20" />
+                        <span style="color: #ff7a3d">Pesanan</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="riwayat-transaksi.html" class="nav-link text-white d-flex align-items-center gap-2 py-2 px-2 rounded-pill" style="background-color: #ff7a3d;" title="Riwayat">
+                        <img src="../img_admin/data-mobil/icon-riwayat.svg" alt="" width="20" height="20" />
+                        <span class="fw-medium" style="color: white">Riwayat</span>
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <!-- Menu -->
-        <ul>
-            <!-- Nav Beranda -->
-            <li>
-                <a href="dashboard.html" title="Beranda">
-                    <img src="../img_admin/riwayat-transaksi/home.svg" alt="" />
-                    <span>Beranda</span>
-                </a>
-            </li>
-
-            <!-- Nav Data Mobil -->
-            <li>
-                <a href="data-mobil.html" title="Data Mobil">
-                    <img src="../img_admin/riwayat-transaksi/icon-data-mobil.svg" alt="" />
-                    <span>Data Mobil</span>
-                </a>
-            </li>
-
-            <!-- Nav Transaksi -->
-            <li>
-                <a href="transaksi.html" class="nav-link" title="Transaksi">
-                    <img src="../img_admin/riwayat-transaksi/icon-pesanan.svg" alt="" />
-                    <span>Transaksi</span>
-                </a>
-            </li>
-
-            <!-- Nav Riwayat -->
-            <li>
-                <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
-                    <img src="../img_admin/riwayat-transaksi/icon-riwayat.svg" alt="" />
-                    <span>Riwayat</span>
-                </a>
-            </li>
-        </ul>
-
         <div>
-            <button type="button">
-          <img src="../img_admin/riwayat-transaksi/log-out.svg" alt="" />
-          <span>Log Out</span>
+            <button type="button" class="btn text-white-50 d-flex align-items-center gap-3 p-0 border-0 bg-transparent">
+          <img src="../img_admin/data-mobil/log-out.svg" alt="" width="20" height="20" />
+          <span style="color: white">Log Out</span>
         </button>
         </div>
     </nav>
-    <!-- Navbar End -->
 
-    <!-- Content Start -->
-    <main>
-        <header>
-            <!-- Keterangan Halaman Kiri Start -->
-            <div>
+    <div class="flex-grow-1 overflow-y-auto p-4" style="background-color: aliceblue;">
+        <div class="container-fluid">
+            <header class="d-flex justify-content-between align-items-center mb-4" style="color:#0d1b2a">
                 <div>
-                    <div></div>
-                    <span>ARSIP OPERASIONAL</span>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <div style="width: 16px; height: 3px; background-color: #ff7a3d;"></div>
+                        <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 1px; color:cornflowerblue">ARSIP OPERASIONAL</span>
+                    </div>
+                    <h2 class="fw-bold m-0 text-dark">Riwayat Transaksi</h2>
+                    <p class="text-muted m-0 small">Telusuri transaksi yang telah selesai atau dibatalkan untuk kebutuhan audit dan layanan pelanggan</p>
                 </div>
-                <h1>Riwayat Transaksi</h1>
-                <p>Telusuri transaksi yang telah selesai atau dibatalkan untuk kebutuhan audit dan layanan pelanggan.</p>
-            </div>
-            <!-- Keterangan Halaman Kiri End -->
 
-            <!-- Keterangan Halaman Kanan Start -->
-            <div>
-                <div>
-                    <div></div>
-                    <span>OPERASIONAL ARMADA</span>
+                <div class="card border-0 shadow-sm px-3 py-2 rounded-pill" style="background-color: #0d1b2a;">
+                    <div class="d-flex align-items-center gap-2 text-white small fw-medium">
+                        <div class="rounded-circle bg-danger" style="width: 8px; height: 8px;"></div>
+                        <span style="color: white">OPERASIONAL ARMADA</span>
+                    </div>
                 </div>
-            </div>
-            <!-- Keterangan Halaman Kanan End -->
-        </header>
+            </header>
 
-        <!-- Card Informasi Riwayat Transaksi Start -->
-        <section>
-            <div id="omset">
-                <h2>Rp 86,4 jt</h2>
-                <p>Pendapatan bulan ini</p>
-            </div>
+            <main>
+                <section class="container py-3">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100" id="semua-pesanan">
+                                <h4 class="fw-bold">Rp 86,4 jt</h4>
+                                <p class="text-muted small mb-0">Pendapatan bulan ini</p>
+                            </div>
+                        </div>
 
-            <div id="total-selesai">
-                <h2>42</h2>
-                <p>Total Selesai</p>
-            </div>
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100" id="menunggu-konfirmasi">
+                                <h4 class="fw-bold" style="color:#ff7a3d">42</h4>
+                                <p class="text-muted small mb-0">Transaksi selesai</p>
+                            </div>
+                        </div>
 
-            <div id="total-dibatalkan">
-                <h2>2</h2>
-                <p>Dibatalkan</p>
-            </div>
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100" id="sedang-berjalan">
+                                <h4 class="fw-bold">2</h4>
+                                <p class="text-muted small mb-0">Dibatalkan</p>
+                            </div>
+                        </div>
 
-            <div id="rata-durasi">
-                <h2>4,8 hari</h2>
-                <p>Rata-rata Durasi</p>
-            </div>
-        </section>
-        <!-- Card Informasi Riwayat Transaksi End -->
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100" id="selesai">
+                                <h4 class="fw-bold">4,8 hari</h4>
+                                <p class="text-muted small mb-0">Rata-rata durasi</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <!-- Content Riwayat Transaksi Start -->
-        <section>
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <section>
+                            <form action="/cari" method="GET" class="d-flex align-items-center mb-4 gap-5">
+                                <div class="flex-grow-1 gap-3">
+                                    <input type="search" name="keyword" class="form-control bg-light border-1 py-2 px-4 rounded-pill shadow-sm" style="background-color: aliceblue;" placeholder="Cari nama, merk, atau plat nomor" />
+                                </div>
 
-            <!-- Search and Filter Start -->
-            <section>
-                <form action="/cari" method="GET">
-                    <input type="search" name="keyword" placeholder="Cari nama, merk, atau plat nomor" />
+                                <div style="width: 140px;">
+                                    <select id="merk" name="merk" class="form-select bg-light border-1 py-2 px-3 rounded-pill shadow-sm gap-3">
+                                  <option value="">Merk</option>
+                                  <option value="avanza">Toyota Avanza</option>
+                                  <option value="xenia">Daihatsu Xenia</option>
+                                  <option value="brio">Honda Brio</option>
+                                  <option value="brv">Honda BR-V</option>
+                                </select>
+                                </div>
 
-                    <!-- Merk / Mobil -->
-                    <select id="merk" name="merk">
-              <option value="">Mobil</option>
-              <option value="avanza">Toyota Avanza</option>
-              <option value="xenia">Daihatsu Xenia</option>
-              <option value="brio">Honda Brio</option>
-              <option value="brv">Honda BR-V</option>
-            </select>
+                                <div style="width: 130px;">
+                                    <select id="jenis" name="jenis" class="form-select bg-light border-1 py-2 px-3 rounded-pill shadow-sm gap-3">
+                                    <option value="">Jenis</option>
+                                    <option value="MPV">MPV</option>
+                                    <option value="SUV">SUV</option>
+                                </select>
+                                </div>
+                                <div style="width: 150px;">
+                                    <select id="status" name="status" class="form-select bg-light border-1 py-2 px-3 rounded-pill shadow-sm">
+                                  <option value="">Status</option>
+                                  <option value="tersedia">Tersedia</option>
+                                  <option value="disewa">Disewa</option>
+                                  <option value="perbaikan">Perbaikan</option>
+                                   <option value="nonaktif">Dibatalkan</option>
+                                   <option value="nonaktif">Selesai</option>
+                                  <option value="nonaktif">Nonaktif</option>
+                                </select>
+                                </div>
 
-                    <!-- Tanggal -->
-                    <input type="date" name="tanggal" id="tanggal">
+                            </form>
+                        </section>
 
-                    <!-- Jenis Pembayaran -->
-                    <select id="metode-pembayaran" name="metode">
-              <option value="">Pembayaran</option>
-              <option value="QRIS">QRIS</option>
-              <option value="TUNAI">Tunai</option>
-            </select>
-
-                    <!-- Status Riwayat -->
-                    <select id="status-riwayat" name="status">
-              <option value="">Status</option>
-              <option value="Selesai">Selesai</option>
-              <option value="Dibatalkan">Dibatalkan</option>
-            </select>
-                </form>
-            </section>
-            <!-- Search and Filter End -->
-
-            <!-- Table Start -->
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>KODE</th>
-                            <th>CUSTOMER</th>
-                            <th>MOBIL</th>
-                            <th>TGL SEWA</th>
-                            <th>BAYAR</th>
-                            <th>TOTAL</th>
-                            <th>STATUS</th>
-                            <th>AKSI</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>TRX-001</td>
-                            <td>Fadhil</td>
-                            <td>Avanza 1.5 G</td>
-                            <td>12-14 Okt 2026</td>
-                            <td>QRIS</td>
-                            <td>Rp 1.575.000</td>
-                            <td><span>Selesai</span></td>
-                            <td><a href="detail-riwayat-transaksi.html">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>TRX-002</td>
-                            <td>Irfan</td>
-                            <td>BR-V Prestige</td>
-                            <td>10-13 Okt 2026</td>
-                            <td>Tunai</td>
-                            <td>Rp 2.700.000</td>
-                            <td><span>Selesai</span></td>
-                            <td><a href="detail-riwayat-transaksi.html">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>TRX-003</td>
-                            <td>Octa</td>
-                            <td>Camry Hybrid</td>
-                            <td>09-11 Okt 2026</td>
-                            <td>QRIS</td>
-                            <td>Rp 3.750.000</td>
-                            <td><span>Dibatalkan</span></td>
-                            <td><a href="detail-riwayat-transaksi.html">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>TRX-004</td>
-                            <td>Awa</td>
-                            <td>Jimny AT</td>
-                            <td>05-08 Okt 2026</td>
-                            <td>Tunai</td>
-                            <td>Rp 3.800.000</td>
-                            <td><span>Selesai</span></td>
-                            <td><a href="detail-riwayat-transaksi.html">Detail</a></td>
-                        </tr>
-                        <tr>
-                            <td>TRX-005</td>
-                            <td>Najib</td>
-                            <td>Brio Satya</td>
-                            <td>01-03 Okt 2026</td>
-                            <td>QRIS</td>
-                            <td>Rp 1.275.000</td>
-                            <td><span>Selesai</span></td>
-                            <td><a href="detail-riwayat-transaksi.html">Detail</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Table End -->
-        </section>
-    </main>
+                        <div class="table-responsive rounded-top-4 overflow-hidden shadow-sm">
+                            <table class="table align-middle mb-0 border-0 ">
+                                <thead style="background-color: #0d1b2a;">
+                                    <tr>
+                                        <th class="py-3 ps-3 border-0 text-white" style="background-color: #0d1b2a; color: white !important;">KODE</th>
+                                        <th class="py-3 border-0" style="background-color: #0d1b2a; color: white !important;">CUSTOMER</th>
+                                        <th class="py-3 border-0" style="background-color: #0d1b2a; color: white !important;">MOBIL</th>
+                                        <th class="py-3 border-0" style="background-color: #0d1b2a; color: white !important;">TANGGAL SEWA</th>
+                                        <th class="py-3 border-0" style="background-color: #0d1b2a; color: white !important;">BAYAR</th>
+                                        <th class="py-3 border-0" style="background-color: #0d1b2a; color: white !important;">TOTAL</th>
+                                        <th class="py-3 border-0" style="background-color: #0d1b2a; color: white !important;">STATUS</th>
+                                        <th class="py-3 pe-3 border-0 text-white" style="background-color: #0d1b2a; color: white !important;">AKSI</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">TRX-001</td>
+                                        <td>Fadhil</td>
+                                        <td>Avanza 1.5 G</td>
+                                        <td>12-14 Okt 2026</td>
+                                        <td>QRIS</td>
+                                        <td>Rp 1.575.000</td>
+                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
+                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">TRX-002</td>
+                                        <td>Irfan</td>
+                                        <td>BR-V Prestige</td>
+                                        <td>10-13 Okt 2026</td>
+                                        <td>Tunai</td>
+                                        <td>Rp 2.700.000</td>
+                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
+                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">TRX-003</td>
+                                        <td>Octa</td>
+                                        <td>Camry Hybrid</td>
+                                        <td>09-11 Okt 2026</td>
+                                        <td>QRIS</td>
+                                        <td>Rp 3.750.000</td>
+                                        <td><span class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill">Dibatalkan</span></td>
+                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">TRX-004</td>
+                                        <td>Awa</td>
+                                        <td>Jimny AT</td>
+                                        <td>05-08 Okt 2026</td>
+                                        <td>Tunai</td>
+                                        <td>Rp 3.800.000</td>
+                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
+                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">TRX-005</td>
+                                        <td>Najib</td>
+                                        <td>Brio Satya</td>
+                                        <td>01-03 Okt 2026</td>
+                                        <td>QRIS</td>
+                                        <td>Rp 1.275.000</td>
+                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
+                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
 </body>
 
 </html>

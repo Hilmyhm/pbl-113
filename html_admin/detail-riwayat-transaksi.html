@@ -8,223 +8,228 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body>
-    <!-- Navbar Start -->
-    <nav>
+<body class="m-0 bg-light d-flex vh-100 overflow-hidden" style="color: #0b1d33">
+    <nav class="d-flex flex-column justify-content-between p-4 text-white flex-shrink-0" style="background-color: #0b1d33; width: 280px;">
         <div>
-            <div>
-                <img src="../img_admin/riwayat-transaksi/gambar.svg" alt="Foto Admin" />
+            <div class="d-flex align-items-center gap-3 mb-5">
+                <div class="rounded-circle d-flex justify-content-center align-items-center p-2" style="background: aliceblue; width: 50px; height: 50px;">
+                    <img src="../img_admin/data-mobil/gambar.svg" alt="Foto Admin" width="28" height="28" />
+                </div>
+                <div>
+                    <h6 class="m-0 text-white-50 small" style="color: white">Halo,</h6>
+                    <h5 class="m-0 fw-bold fs-6" style="color: white">Nama Admin</h5>
+                </div>
             </div>
-            <div>
-                <h4>Halo,</h4>
-                <h2>Nama Admin</h2>
-            </div>
+
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link text-white d-flex align-items-center gap-3 py-2 px-3 rounded-pill" title="Beranda">
+                        <img src="../img_admin/data-mobil/home.svg" alt="" width="20" height="20" />
+                        <span style="color: #ff7a3d">Beranda</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="data-mobil.html" class="nav-link text-white d-flex align-items-center gap-3 py-2 px-3 rounded-pill" title="Data Mobil">
+                        <img src="../img_admin/dashboard/icon-data-mobil.svg" alt="" width="20" height="20" />
+                        <span style="color: #ff7a3d ">Data Mobil</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="transaksi.html" class="nav-link text-black-50 d-flex align-items-center gap-3 py-2 px-3 rounded-pill" title="Transaksi">
+                        <img src="../img_admin/data-mobil/icon-pesanan.svg" alt="" width="20" height="20" />
+                        <span style="color: #ff7a3d">Pesanan</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="riwayat-transaksi.html" class="nav-link text-white d-flex align-items-center gap-2 py-2 px-2 rounded-pill" style="background-color: #ff7a3d;" title="Riwayat">
+                        <img src="../img_admin/data-mobil/icon-riwayat.svg" alt="" width="20" height="20" />
+                        <span class="fw-medium" style="color: white">Riwayat</span>
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <!-- Menu -->
-        <ul>
-            <!-- Nav Beranda -->
-            <li>
-                <a href="dashboard.html" title="Beranda">
-                    <img src="../img_admin/riwayat-transaksi/home.svg" alt="" />
-                    <span>Beranda</span>
-                </a>
-            </li>
-
-            <!-- Nav Data Mobil -->
-            <li>
-                <a href="data-mobil.html" title="Data Mobil">
-                    <img src="../img_admin/riwayat-transaksi/icon-data-mobil.svg" alt="" />
-                    <span>Data Mobil</span>
-                </a>
-            </li>
-
-            <!-- Nav Transaksi -->
-            <li>
-                <a href="transaksi.html" class="nav-link" title="Transaksi">
-                    <img src="../img_admin/riwayat-transaksi/icon-pesanan.svg" alt="" />
-                    <span>Transaksi</span>
-                </a>
-            </li>
-
-            <!-- Nav Riwayat -->
-            <li>
-                <a href="riwayat-transaksi.html" class="nav-link" title="Riwayat">
-                    <img src="../img_admin/riwayat-transaksi/icon-riwayat.svg" alt="" />
-                    <span>Riwayat</span>
-                </a>
-            </li>
-        </ul>
-
         <div>
-            <button type="button">
-          <img src="../img_admin/riwayat-transaksi/log-out.svg" alt="" />
-          <span>Logout</span>
+            <button type="button" class="btn text-white-50 d-flex align-items-center gap-3 p-0 border-0 bg-transparent">
+          <img src="../img_admin/data-mobil/log-out.svg" alt="" width="20" height="20" />
+          <span style="color: white">Log Out</span>
         </button>
         </div>
     </nav>
-    <!-- Navbar End -->
 
-    <!-- Content Start -->
-    <main>
-        <!-- Header Content Start -->
-        <header>
-            <!-- Keterangan Halaman Kiri Start -->
-            <div>
+    <div class="flex-grow-1 overflow-y-auto p-4" style="background-color: aliceblue;">
+        <div class="container-fluid">
+            <header class="d-flex justify-content-between align-items-center mb-4" style="color:#0d1b2a">
                 <div>
-                    <div></div>
-                    <span>ARSIP SELESAI</span>
+                    <div class="d-flex align-items-center gap-2 mb-1">
+                        <div style="width: 16px; height: 3px; background-color: #ff7a3d;"></div>
+                        <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 1px; color:cornflowerblue">ARSIP SELESAI</span>
+                    </div>
+                    <h2 class="fw-bold m-0 text-dark">Detail Riwayat Transaksi</h2>
+                    <p class="text-muted m-0 small">Rekam lengkap transaksi, pembayaran, dan perubahan status untuk referensi operasional</p>
                 </div>
-                <h1>Detail Riwayat Transaksi</h1>
-                <p>Rekam lengkap transaksi, pembayaran, dan perubahan status untuk referensi operasional.</p>
-            </div>
-            <!-- Keterangan Halaman Kiri End -->
 
-            <!-- Keterangan Halaman Kanan Start -->
-            <div>
-                <div>
-                    <div></div>
-                    <span>OPERASIONAL ARMADA</span>
-                </div>
-            </div>
-            <!-- Keterangan Halaman Kanan End -->
-        </header>
-        <!-- Header Content End -->
-
-        <!-- detail riwayat transaksi start -->
-        <section>
-
-            <!-- Data Transaksi srtat -->
-            <div>
-                <h2>Data Transaksi</h2>
-                <ul>
-                    <li>
-                        <span>Nama customer</span>
-                        <strong>Sinta Maharani</strong>
-                    </li>
-                    <li>
-                        <span>Mobil</span>
-                        <strong>Suzuki Jimny AT</strong>
-                    </li>
-                    <li>
-                        <span>Tanggal</span>
-                        <strong>05-08 Oktober 2026</strong>
-                    </li>
-                    <li>
-                        <span>Durasi</span>
-                        <strong>4 hari</strong>
-                    </li>
-                    <li>
-                        <span>Layanan</span>
-                        <strong>Lepas Kunci</strong>
-                    </li>
-                    <li>
-                        <span>Penerimaan</span>
-                        <strong>Diantar</strong>
-                    </li>
-                    <li>
-                        <span>Status pesanan</span>
-                        <span>Selesai</span>
-                    </li>
-                </ul>
-                <div>
-                    <span>Kode Booking</span>
-                    <strong>BK-104829</strong>
-                </div>
-            </div>
-            <!-- Data Transaksi end -->
-
-            <!-- Pembayaran, Status -->
-            <div>
-                <h2>Pembayaran & Status</h2>
-                <ul>
-                    <li>
-                        <span>Metode</span>
-                        <strong>QRIS</strong>
-                    </li>
-                    <li>
-                        <span>Harga/hari</span>
-                        <strong>Rp 350.000</strong>
-                    </li>
-                    <li>
-                        <span>Subtotal sewa</span>
-                        <strong>Rp 3.800.000</strong>
-                    </li>
-                    <li>
-                        <span>Biaya antar</span>
-                        <strong>Rp 75.000</strong>
-                    </li>
-                    <li>
-                        <span>Denda keterlambatan</span>
-                        <strong>Rp 0</strong>
-                    </li>
-                    <li>
-                        <span>Total pembayaran</span>
-                        <strong>Rp 3.875.000</strong>
-                    </li>
-                    <li>
-                        <span>Status pembayaran</span>
-                        <span>Berhasil</span>
-                    </li>
-                </ul>
-            </div>
-            <!-- Pembayaran, Status end -->
-
-        </section>
-        <!-- detail riwayat transaksi end -->
-
-
-        <!-- Grid yg Bawah: Riwayat Status (Timeline) -->
-        <section>
-            <h2>Riwayat Status</h2>
-            <div>
-
-                <!-- Step 1 -->
-                <div>
-                    <div><img src="../img_admin/detail-riwayat-transaksi/check.svg" alt=""></div>
-                    <h3>Menunggu Pembayaran</h3>
-                    <div>
-                        <p>05 Okt 2026 · 09.10 WIB</p>
-                        <small>Pesanan dibuat melalui aplikasi</small>
+                <div class="card border-0 shadow-sm px-3 py-2 rounded-pill" style="background-color: #0d1b2a;">
+                    <div class="d-flex align-items-center gap-2 text-white small fw-medium">
+                        <div class="rounded-circle bg-danger" style="width: 8px; height: 8px;"></div>
+                        <span style="color: white">OPERASIONAL ARMADA</span>
                     </div>
                 </div>
+            </header>
 
-                <!-- Step 2 -->
-                <div>
-                    <div><img src="../img_admin/detail-riwayat-transaksi/check.svg" alt=""></div>
-                    <h3>Pembayaran Berhasil</h3>
-                    <div>
-                        <p>05 Okt 2026 · 09.14 WIB</p>
-                        <small>QRIS diverifikasi otomatis</small>
+            <main>
+                <div class="container py-4">
+                    <div class="row g-4 align-items-start">
+                        <!-- Kolom Kiri: Data Transaksi -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                                <h4 class="fw-bold mb-4">Data Transaksi</h4>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Nama customer</span>
+                                        <strong>Sinta Maharani</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Mobil</span>
+                                        <strong>Suzuki Jimny AT</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Tanggal</span>
+                                        <strong>05-08 Oktober 2026</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Durasi</span>
+                                        <strong>4 hari</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Layanan</span>
+                                        <strong>Lepas Kunci</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Penerimaan</span>
+                                        <strong>Diantar</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Status pesanan</span>
+                                        <span class="badge bg-light text-secondary border px-3 py-2 rounded-pill">Selesai</span>
+                                    </li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center pt-2">
+                                    <strong class="fw-bold">Kode Booking</strong>
+                                    <span class="badge border bg-light px-3 py-2 rounded-pill" style="border-color: #ff7a00 !important; color: #ff7a00 !important;">BK-104829</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+                                <h4 class="fw-bold mb-4">Pembayaran & Status</h4>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Metode</span>
+                                        <strong>QRIS</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Harga/hari</span>
+                                        <strong>Rp 350.000</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Subtotal sewa</span>
+                                        <strong>Rp 3.800.000</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Biaya antar</span>
+                                        <strong>Rp 75.000</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Denda keterlambatan</span>
+                                        <strong>Rp 0</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Total pembayaran</span>
+                                        <strong>Rp 3.875.000</strong>
+                                    </li>
+                                    <li class="d-flex justify-content-between align-items-center pt-3">
+                                        <span class="text-muted">Status pembayaran</span>
+                                        <span class="badge bg-light text-success border border-success-subtle px-3 py-2 rounded-pill">Berhasil</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                            <h4 class="fw-bold mb-4">Riwayat Status</h4>
+                            <div class="row g-3">
+
+                                <div class="col-md-3">
+                                    <div class="card border border-secondary-subtle shadow-sm rounded-3 p-3 h-100 bg-white">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <img src="../img_admin/detail-riwayat-transaksi/check.svg" alt="" width="20" />
+                                            <h6 class="fw-bold mb-0" style="font-size: 14px;">Menunggu Pembayaran</h6>
+                                        </div>
+                                        <div>
+                                            <p class="text-primary small mb-1 fw-semibold" style="font-size: 12px;">05 Okt 2026 · 09.10 WIB</p>
+                                            <small class="text-muted" style="font-size: 11px;">Pesanan dibuat melalui aplikasi</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card border border-secondary-subtle shadow-sm rounded-3 p-3 h-100 bg-white">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <img src="../img_admin/detail-riwayat-transaksi/check.svg" alt="" width="20" />
+                                            <h6 class="fw-bold mb-0" style="font-size: 14px;">Pembayaran Berhasil</h6>
+                                        </div>
+                                        <div>
+                                            <p class="text-primary small mb-1 fw-semibold" style="font-size: 12px;">05 Okt 2026 · 09.14 WIB</p>
+                                            <small class="text-muted" style="font-size: 11px;">QRIS diverifikasi otomatis</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card border border-secondary-subtle shadow-sm rounded-3 p-3 h-100 bg-white">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <img src="../img_admin/detail-riwayat-transaksi/check.svg" alt="" width="20" />
+                                            <h6 class="fw-bold mb-0" style="font-size: 14px;">Kendaraan Diserahkan</h6>
+                                        </div>
+                                        <div>
+                                            <p class="text-primary small mb-1 fw-semibold" style="font-size: 12px;">05 Okt 2026 · 08.02 WIB</p>
+                                            <small class="text-muted" style="font-size: 11px;">Serah terima oleh petugas</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card shadow-sm rounded-3 p-3 h-100" style="background-color: #f0fdf4; border: 1px solid #22c55e;">
+                                        <div class="d-flex align-items-center gap-2 mb-2">
+                                            <img src="../img_admin/detail-riwayat-transaksi/check.svg" alt="" width="20" />
+                                            <h6 class="fw-bold mb-0 text-success" style="font-size: 14px;">Selesai</h6>
+                                        </div>
+                                        <div>
+                                            <p class="text-success small mb-1 fw-semibold" style="font-size: 12px;">08 Okt 2026 · 16.30 WIB</p>
+                                            <small class="text-muted" style="font-size: 11px;">Kendaraan diterima tanpa kerusakan</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-3 flex-wrap">
+                            <a href="riwayat-transaksi.html" class="btn btn-outline-warning px-4 py-2 rounded-3 fw-medium shadow-sm bg-light-subtle text-decoration-none" style="border-color: #ff7a00; color:#ff7a00">
+                                Kembali
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Step 3 -->
-                <div>
-                    <div><img src="../img_admin/detail-riwayat-transaksi/check.svg" alt=""></div>
-                    <h3>Kendaraan Diserahkan</h3>
-                    <div>
-                        <p>05 Okt 2026 · 08.02 WIB</p>
-                        <small>Serah terima oleh petugas</small>
-                    </div>
-                </div>
-
-                <!-- Step 4 (Selesai/Active) -->
-                <div>
-                    <div><img src="../img_admin/detail-riwayat-transaksi/check.svg" alt=""></div>
-                    <div>
-                        <h3>Selesai</h3>
-                        <p>08 Okt 2026 · 16.30 WIB</p>
-                        <small>Kendaraan diterima tanpa kerusakan</small>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- Grid yg Bawah: Riwayat Status (Timeline) -->
-
-    </main>
-    <!-- Content End -->
+            </main>
+        </div>
+    </div>
 </body>
 
 </html>
