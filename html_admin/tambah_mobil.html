@@ -71,7 +71,7 @@
                         <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 1px; color:cornflowerblue">MANAJEMEN ARMADA</span>
                     </div>
                     <h2 class="fw-bold m-0 text-dark">Tambah Mobil</h2>
-                    <p class="text-muted m-0 small">Atur dan custom data mobil dengan baik</p>
+                    <p class="text-muted m-0 small">Lengkapi profil kendaraan baru agar siap dipublikasi ke katalog penyewaan</p>
                 </div>
 
                 <div class="card border-0 shadow-sm px-3 py-2 rounded-pill" style="background-color: #0d1b2a;">
@@ -107,7 +107,7 @@
                         <div class="col-12 col-lg-8">
                             <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
 
-                                <form action="" method="post">
+                                <form id="form-tambah" action="" method="post">
                                     <header class="mb-4">
                                         <h3 class="fw-bold text-dark">Informasi kendaraan</h3>
                                         <p class="text-muted small mb-1">Terakhir diperbarui 28 September 2026 oleh Admin Operasional.</p>
@@ -203,6 +203,38 @@
     <!-- link scrip js bostrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- script js manual -->
+    <script>
+        document.getElementById('form-tambah').addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah reload halaman
+
+            // Ambil data lama dari localStorage atau buat array kosong baru
+            let dbMobil = JSON.parse(localStorage.getItem('dbMobil')) || [];
+
+            // Buat objek mobil baru dengan ID unik dari waktu saat ini
+            const mobilBaru = {
+                id: Date.now().toString(),
+                merk: document.getElementById('merk').value,
+                nama: document.getElementById('nama-mobil').value,
+                jenis: document.getElementById('jenis').value,
+                status: document.getElementById('status').value,
+                harga: document.getElementById('harga-sewa').value,
+                plat: document.getElementById('plat-nomor').value,
+                spesifikasi: document.getElementById('spesifikasi').value,
+                // Foto disimulasikan dengan gambar default dulu
+                foto: '../img_admin/data-mobil/source/1.jpg'
+            };
+
+            // Simpan ke database sementara
+            dbMobil.push(mobilBaru);
+            localStorage.setItem('dbMobil', JSON.stringify(dbMobil));
+
+            alert('Mobil berhasil ditambahkan!');
+            window.location.href = 'data-mobil.html'; // Arahkan kembali ke data mobil
+        });
+    </script>
+
 </body>
+
+
 
 </html>

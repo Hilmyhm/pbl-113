@@ -167,57 +167,8 @@
                                         <th class="py-3 pe-3 border-0 text-white" style="background-color: #0d1b2a; color: white !important;">AKSI</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="ps-3 fw-bold">TRX-001</td>
-                                        <td>Fadhil</td>
-                                        <td>Avanza 1.5 G</td>
-                                        <td>12-14 Okt 2026</td>
-                                        <td>QRIS</td>
-                                        <td>Rp 1.575.000</td>
-                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
-                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-3 fw-bold">TRX-002</td>
-                                        <td>Irfan</td>
-                                        <td>BR-V Prestige</td>
-                                        <td>10-13 Okt 2026</td>
-                                        <td>Tunai</td>
-                                        <td>Rp 2.700.000</td>
-                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
-                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-3 fw-bold">TRX-003</td>
-                                        <td>Octa</td>
-                                        <td>Camry Hybrid</td>
-                                        <td>09-11 Okt 2026</td>
-                                        <td>QRIS</td>
-                                        <td>Rp 3.750.000</td>
-                                        <td><span class="badge bg-danger-subtle text-danger border border-danger-subtle px-3 py-2 rounded-pill">Dibatalkan</span></td>
-                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-3 fw-bold">TRX-004</td>
-                                        <td>Awa</td>
-                                        <td>Jimny AT</td>
-                                        <td>05-08 Okt 2026</td>
-                                        <td>Tunai</td>
-                                        <td>Rp 3.800.000</td>
-                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
-                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-3 fw-bold">TRX-005</td>
-                                        <td>Najib</td>
-                                        <td>Brio Satya</td>
-                                        <td>01-03 Okt 2026</td>
-                                        <td>QRIS</td>
-                                        <td>Rp 1.275.000</td>
-                                        <td><span class="badge bg-success-subtle text-success border px-3 py-2 rounded-pill">Selesai</span></td>
-                                        <td class="pe-3"><a href="detail-riwayat-transaksi.html" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
-                                    </tr>
+                                <tbody id="tabel-riwayat">
+                                    <!-- Data riwayat akan diisi otomatis oleh JavaScript -->
                                 </tbody>
                             </table>
                         </div>
@@ -225,6 +176,40 @@
                     </div>
                 </div>
             </main>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const tbody = document.getElementById('tabel-riwayat');
+                    let riwayatPesanan = JSON.parse(localStorage.getItem('dbRiwayatPesanan')) || [];
+
+                    tbody.innerHTML = '';
+
+                    if (riwayatPesanan.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="8" class="text-center text-muted py-4">Belum ada riwayat transaksi</td></tr>';
+                        return;
+                    }
+
+                    riwayatPesanan.forEach(pesanan => {
+                        // Tentukan warna badge (Bisa disesuaikan dengan kebutuhan)
+                        let warnaBadge = "bg-success-subtle text-success";
+                        if (pesanan.status === "Dibatalkan") warnaBadge = "bg-danger-subtle text-danger border-danger-subtle";
+
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                <td class="ps-3 fw-bold">${pesanan.kode}</td>
+                <td>${pesanan.nama_customer}</td>
+                <td>${pesanan.nama_mobil}</td>
+                <td>${pesanan.tgl_sewa}</td>
+                <td>Tunai / QRIS</td>
+                <td>${pesanan.total_biaya}</td>
+                <td><span class="badge ${warnaBadge} border px-3 py-2 rounded-pill">${pesanan.status}</span></td>
+                <td class="pe-3"><a href="detail-riwayat-transaksi.html?id=${pesanan.id}" class="btn btn-sm btn-light border px-3 rounded-pill">Detail</a></td>
+            `;
+                        tbody.appendChild(tr);
+                    });
+                });
+            </script>
+
 </body>
 
 </html>

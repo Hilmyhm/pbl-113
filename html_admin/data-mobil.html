@@ -215,6 +215,53 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tbody = document.querySelector('tbody');
+            let dbMobil = JSON.parse(localStorage.getItem('dbMobil')) || [];
+
+            tbody.innerHTML = ''; // Kosongkan isi tabel bawaan HTML
+
+            dbMobil.forEach(mobil => {
+                // Tentukan warna badge status
+                let badgeColor = mobil.status === 'Tersedia' ? 'success' : (mobil.status === 'Dipinjam' ? 'secondary' : 'warning');
+
+                const tr = document.createElement('tr');
+                tr.className = 'border-bottom';
+                tr.innerHTML = `
+            <td class="ps-3"><img src="${mobil.foto}" class="rounded-3 object-fit-cover shadow-sm" width="70" height="45" /></td>
+            <td class="fw-medium">${mobil.merk}</td>
+            <td class="fw-bold">${mobil.nama}</td>
+            <td class="text-secondary">${mobil.jenis}</td>
+            <td class="fw-medium">${mobil.harga}</td>
+            <td><span class="badge bg-${badgeColor} bg-opacity-10 text-${badgeColor} border border-${badgeColor} px-3 py-2 rounded-pill fw-medium">${mobil.status}</span></td>
+            <td class="pe-3">
+                <div class="d-flex gap-1">
+                    <!-- Lempar ID mobil ke URL -->
+                    <a href="detail-mobil.html?id=${mobil.id}" class="btn btn-sm px-3 rounded-3" style="border: 1px solid #6c757d; color: BLACK;">Detail</a>
+                    <a href="edit-mobil.html?id=${mobil.id}" class="btn btn-sm px-3 rounded-3" style="border: 1px solid #6c757d; color: BLACK;">Edit</a>
+                    <button onclick="hapusMobil('${mobil.id}')" class="btn btn-sm px-3 rounded-3" style="border: 1px solid #dc3545; color: #dc3545;">Hapus</button>
+                </div>
+            </td>
+        `;
+                tbody.appendChild(tr);
+            });
+        });
+
+        // Fungsi Hapus Mobil
+        function hapusMobil(id) {
+            if (confirm('Yakin ingin menghapus mobil ini?')) {
+                let dbMobil = JSON.parse(localStorage.getItem('dbMobil')) || [];
+                dbMobil = dbMobil.filter(mobil => mobil.id !== id);
+                localStorage.setItem('dbMobil', JSON.stringify(dbMobil));
+                location.reload(); // Refresh halaman
+            }
+        }
+    </script>
+
 </body>
+
+
 
 </html>

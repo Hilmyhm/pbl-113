@@ -90,36 +90,36 @@
                                 <ul class="list-unstyled mb-4">
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Nama customer</span>
-                                        <strong>Sinta Maharani</strong>
+                                        <strong id="detail-nama">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Mobil</span>
-                                        <strong>Suzuki Jimny AT</strong>
+                                        <strong id="detail-mobil">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Tanggal</span>
-                                        <strong>05-08 Oktober 2026</strong>
+                                        <strong id="detail-tgl">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Durasi</span>
-                                        <strong>4 hari</strong>
+                                        <strong id="detail-durasi">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Layanan</span>
-                                        <strong>Lepas Kunci</strong>
+                                        <strong id="detail-layanan">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Penerimaan</span>
-                                        <strong>Diantar</strong>
+                                        <strong id="detail-penerimaan">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Status pesanan</span>
-                                        <span class="badge bg-light text-secondary border px-3 py-2 rounded-pill">Selesai</span>
+                                        <span id="detail-status" class="badge px-3 py-2 rounded-pill">Memuat...</span>
                                     </li>
                                 </ul>
                                 <div class="d-flex justify-content-between align-items-center pt-2">
                                     <strong class="fw-bold">Kode Booking</strong>
-                                    <span class="badge border bg-light px-3 py-2 rounded-pill" style="border-color: #ff7a00 !important; color: #ff7a00 !important;">BK-104829</span>
+                                    <span id="detail-kode" class="badge border bg-light px-3 py-2 rounded-pill" style="border-color: #ff7a00 !important; color: #ff7a00 !important;">Memuat...</span>
                                 </div>
                             </div>
                         </div>
@@ -130,31 +130,31 @@
                                 <ul class="list-unstyled mb-0">
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Metode</span>
-                                        <strong>QRIS</strong>
+                                        <strong id="detail-metode">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Harga/hari</span>
-                                        <strong>Rp 350.000</strong>
+                                        <strong id="detail-harga-hari">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Subtotal sewa</span>
-                                        <strong>Rp 3.800.000</strong>
+                                        <strong id="detail-subtotal">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
-                                        <span class="text-muted">Biaya antar</span>
-                                        <strong>Rp 75.000</strong>
+                                        <span class="text-muted">Biaya tambahan</span>
+                                        <strong id="detail-biaya-tambahan">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Denda keterlambatan</span>
-                                        <strong>Rp 0</strong>
+                                        <strong id="detail-denda">Rp 0</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center py-2">
                                         <span class="text-muted">Total pembayaran</span>
-                                        <strong>Rp 3.875.000</strong>
+                                        <strong id="detail-total">Memuat...</strong>
                                     </li>
                                     <li class="d-flex justify-content-between align-items-center pt-3">
                                         <span class="text-muted">Status pembayaran</span>
-                                        <span class="badge bg-light text-success border border-success-subtle px-3 py-2 rounded-pill">Berhasil</span>
+                                        <span id="detail-status-bayar" class="badge px-3 py-2 rounded-pill">Memuat...</span>
                                     </li>
                                 </ul>
                             </div>
@@ -230,6 +230,81 @@
             </main>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Tangkap ID dari URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const idPesanan = urlParams.get('id');
+
+            // 2. Cari data pesanan di localStorage
+            let riwayatPesanan = JSON.parse(localStorage.getItem('dbRiwayatPesanan')) || [];
+            const pesanan = riwayatPesanan.find(p => p.id === idPesanan);
+
+            // 3. Timpa teks HTML dengan data asli jika pesanan ditemukan
+            if (pesanan) {
+                // Data Transaksi
+                document.getElementById('detail-nama').textContent = pesanan.nama_customer;
+                document.getElementById('detail-mobil').textContent = pesanan.nama_mobil;
+                document.getElementById('detail-tgl').textContent = pesanan.tgl_sewa;
+                document.getElementById('detail-kode').textContent = pesanan.kode;
+
+                // Menangani data tambahan yang ada di localStorage tapi tidak tersimpan di dbRiwayatPesanan awal
+                document.getElementById('detail-durasi').textContent = localStorage.getItem('sewa_durasi') || "4 Hari";
+                document.getElementById('detail-layanan').textContent = localStorage.getItem('sewa_tipe_layanan') || "Lepas Kunci";
+                document.getElementById('detail-penerimaan').textContent = localStorage.getItem('sewa_penerimaan') || "Diantar";
+
+                // Pembayaran
+                document.getElementById('detail-metode').textContent = "QRIS"; // Default simulasi
+                document.getElementById('detail-harga-hari').textContent = localStorage.getItem('sewa_biaya') || "Rp 0";
+
+                // Kalkulasi Subtotal (Sewa Dasar tanpa Biaya Tambahan)
+                const biayaSewa = localStorage.getItem('sewa_biaya') || "Rp 0";
+                const angkaSewa = parseInt(biayaSewa.replace(/[^0-9]/g, '')) || 0;
+                const durasiAngka = parseInt(localStorage.getItem('sewa_durasi')) || 1;
+                const subtotal = angkaSewa * durasiAngka;
+
+                document.getElementById('detail-subtotal').textContent = new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    maximumFractionDigits: 0
+                }).format(subtotal);
+
+                const biayaTambahan = parseInt(localStorage.getItem('sewa_biaya_tambahan')) || 0;
+                document.getElementById('detail-biaya-tambahan').textContent = new Intl.NumberFormat('id-ID', {
+                    style: 'currency',
+                    currency: 'IDR',
+                    maximumFractionDigits: 0
+                }).format(biayaTambahan);
+
+                document.getElementById('detail-total').textContent = pesanan.total_biaya;
+
+                // Status Pesanan (Badge Styling)
+                const statusBadge = document.getElementById('detail-status');
+                statusBadge.textContent = pesanan.status;
+                if (pesanan.status === "Selesai") {
+                    statusBadge.className = "badge bg-light text-success border border-success px-3 py-2 rounded-pill";
+                } else if (pesanan.status === "Dibatalkan") {
+                    statusBadge.className = "badge bg-light text-danger border border-danger px-3 py-2 rounded-pill";
+                } else {
+                    statusBadge.className = "badge bg-light text-secondary border px-3 py-2 rounded-pill";
+                }
+
+                // Status Pembayaran (Badge Styling)
+                const bayarBadge = document.getElementById('detail-status-bayar');
+                if (pesanan.status === "Menunggu") {
+                    bayarBadge.textContent = "Menunggu";
+                    bayarBadge.className = "badge bg-light text-warning border border-warning px-3 py-2 rounded-pill";
+                } else {
+                    bayarBadge.textContent = "Berhasil";
+                    bayarBadge.className = "badge bg-light text-success border border-success-subtle px-3 py-2 rounded-pill";
+                }
+            } else {
+                alert("Data pesanan tidak ditemukan.");
+            }
+        });
+    </script>
+
 </body>
 
 </html>

@@ -42,6 +42,24 @@
             </div>
         </form>
     </main>
+
+    <script>
+        document.getElementById('formLayanan').addEventListener('submit', function(e) {
+            // Simpan tipe layanan
+            localStorage.setItem('sewa_tipe_layanan', 'Dengan Sopir');
+            localStorage.setItem('sewa_penerimaan', '-'); // Kosongkan penerimaan
+
+            // Simpan lokasi penjemputan
+            const alamat = document.getElementById('alamat-penjemputan').value;
+            localStorage.setItem('sewa_lokasi', alamat || 'Alamat tidak diisi');
+
+            // Misal biaya sopir adalah 150rb per hari
+            const durasiHari = parseInt(localStorage.getItem('sewa_durasi')) || 1;
+            const biayaSopir = 150000 * durasiHari;
+            localStorage.setItem('sewa_biaya_tambahan', biayaSopir);
+        });
+    </script>
+
 </body>
 
 </html>

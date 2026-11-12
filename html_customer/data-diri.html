@@ -21,7 +21,7 @@
         <h2 class="fs-4 fw-bold px-3 my-2">Lengkapi data penyewa</h2>
         <p class="text-secondary small px-3 my-1">Pastikan data sesuai dokumen resmi untuk proses verifikasi.</p>
 
-        <form action="pilihan-layanan.html" method="post" class="my-4">
+        <form action="pilihan-layanan.html" method="get" class="my-4">
 
             <div class="mb-4 px-3">
                 <label for="nama-lengkap" class="h8 fw-bold">Nama Lengkap</label>
@@ -70,6 +70,21 @@
             </div>
         </form>
     </main>
+
+    <script>
+        // Tangkap form data diri saat disubmit
+        const formDataDiri = document.querySelector('form');
+        formDataDiri.addEventListener('submit', function(e) {
+            // Ambil nilai dari input yang diisi user
+            const namaPenyewa = document.getElementById('nama-lengkap').value;
+            const noHpPenyewa = document.getElementById('nomor-hp').value;
+
+            // Simpan ke localStorage agar bisa dipanggil nanti
+            localStorage.setItem('sewa_nama_penyewa', namaPenyewa);
+            localStorage.setItem('sewa_nohp_penyewa', noHpPenyewa);
+        });
+    </script>
+
 </body>
 
 </html>

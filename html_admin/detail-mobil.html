@@ -201,6 +201,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- script js manual -->
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Tangkap ID dari URL (?id=...)
+            const urlParams = new URLSearchParams(window.location.search);
+            const idMobil = urlParams.get('id');
+
+            let dbMobil = JSON.parse(localStorage.getItem('dbMobil')) || [];
+            // 2. Cari data mobil yang ID-nya cocok
+            const dataYangMauDiedit = dbMobil.find(mobil => mobil.id === idMobil);
+
+            if (dataYangMauDiedit) {
+                // 3. Masukkan datanya ke dalam form HTML secara otomatis
+                document.getElementById('merk').value = dataYangMauDiedit.merk;
+                document.getElementById('nama-mobil').value = dataYangMauDiedit.nama;
+                document.getElementById('jenis').value = dataYangMauDiedit.jenis;
+                document.getElementById('status').value = dataYangMauDiedit.status;
+                document.getElementById('harga-sewa').value = dataYangMauDiedit.harga;
+                document.getElementById('plat-nomor').value = dataYangMauDiedit.plat;
+                document.getElementById('spesifikasi').value = dataYangMauDiedit.spesifikasi;
+            }
+
+            // 4. Proses saat tombol Simpan Perubahan diklik
+            document.getElementById('form-edit').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Update data di dalam array
+                const index = dbMobil.findIndex(mobil => mobil.id === idMobil);
+                if (index !== -1) {
+                    dbMobil[index].merk = document.getElementById('merk').value;
+                    dbMobil[index].nama = document.getElementById('nama-mobil').value;
+                    dbMobil[index].jenis = document.getElementById('jenis').value;
+                    dbMobil[index].status = document.getElementById('status').value;
+                    dbMobil[index].harga = document.getElementById('harga-sewa').value;
+                    dbMobil[index].plat = document.getElementById('plat-nomor').value;
+                    dbMobil[index].spesifikasi = document.getElementById('spesifikasi').value;
+
+                    // Simpan ulang ke localStorage
+                    localStorage.setItem('dbMobil', JSON.stringify(dbMobil));
+                    alert('Data berhasil diubah!');
+                    window.location.href = 'data-mobil.html';
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

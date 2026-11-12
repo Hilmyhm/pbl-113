@@ -26,7 +26,8 @@
         <section class="card rounded-4 border p-3 shadow-sm">
             <div class="d-flex justify-content-between align-items-center mb-1">
                 <span class="text-muted small">Total pembayaran</span>
-                <strong class="fw-bold text-dark">Rp 1.400.000</strong>
+                <!-- 🟢 DITAMBAHKAN ID: tunai-total -->
+                <strong id="tunai-total" class="fw-bold text-dark">Rp 1.400.000</strong>
             </div>
             <hr class="my-2 text-muted opacity-25">
             <div class="d-flex justify-content-between align-items-center">
@@ -74,6 +75,13 @@
         </div>
 
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const totalBiaya = localStorage.getItem('sewa_total_biaya_akhir') || "Rp 0";
+            document.getElementById('tunai-total').textContent = totalBiaya;
+        });
+    </script>
 
 </body>
 

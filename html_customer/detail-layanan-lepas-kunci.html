@@ -81,6 +81,27 @@
             </div>
         </form>
     </main>
+
+    <script>
+        document.getElementById('formLayanan').addEventListener('submit', function(e) {
+            // Simpan tipe layanan
+            localStorage.setItem('sewa_tipe_layanan', 'Lepas Kunci');
+
+            // Cek radio button mana yang dipilih
+            const metodePenerimaan = document.querySelector('input[name="metode-penerimaan"]:checked').value;
+            if (metodePenerimaan === 'diantar') {
+                localStorage.setItem('sewa_penerimaan', 'Diantar ke lokasi');
+                localStorage.setItem('sewa_lokasi', document.getElementById('lokasi-pengantaran').value || 'Alamat tidak diisi');
+                localStorage.setItem('sewa_biaya_tambahan', 50000); // Misal biaya antar 50rb
+            } else {
+                localStorage.setItem('sewa_penerimaan', 'Ambil di garasi');
+                localStorage.setItem('sewa_lokasi', 'Garasi Rental GoRental');
+                localStorage.setItem('sewa_biaya_tambahan', 0);
+            }
+        });
+    </script>
+
 </body>
+
 
 </html>

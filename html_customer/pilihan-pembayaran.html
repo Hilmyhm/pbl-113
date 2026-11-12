@@ -23,24 +23,24 @@
 
             <div class="d-flex justify-content-between mb-2">
                 <span class="text-muted">Mobil</span>
-                <strong class="fw-semibold text-dark">Toyota Avanza</strong>
+                <strong id="bayar-mobil" class="fw-semibold text-dark">Toyota Avanza</strong>
             </div>
 
             <div class="d-flex justify-content-between mb-2">
                 <span class="text-muted">Tanggal</span>
-                <strong class="fw-semibold text-dark">12-14 Okt 2026</strong>
+                <strong id="bayar-tanggal" class="fw-semibold text-dark">12-14 Okt 2026</strong>
             </div>
 
             <div class="d-flex justify-content-between mb-2">
                 <span class="text-muted">Layanan</span>
-                <strong class="fw-semibold text-dark">Lepas Kunci</strong>
+                <strong id="bayar-layanan" class="fw-semibold text-dark">Lepas Kunci</strong>
             </div>
 
             <hr class="my-3 text-muted opacity-25">
 
             <div class="d-flex justify-content-between align-items-center">
                 <strong class="fw-bold text-dark">Total Pembayaran</strong>
-                <strong class="fw-bold text-dark">Rp 1.400.000</strong>
+                <strong id="bayar-total" class="fw-bold text-dark">Rp 1.400.000</strong>
             </div>
         </section>
 
@@ -108,6 +108,44 @@
         </main>
 
         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const databaseMobil = {
+                    "avanza": "Toyota Avanza",
+                    "brv": "Honda BR-V",
+                    "innova": "Toyota Innova",
+                    "brio": "Honda Brio",
+                    "rush": "Toyota Rush",
+                    "ayla": "Daihatsu Ayla"
+                };
+
+                // Ambil data dari LocalStorage
+                const idMobil = localStorage.getItem('sewa_mobil_id') || 'avanza';
+                const tglMulai = localStorage.getItem('sewa_mulai');
+                const tglSelesai = localStorage.getItem('sewa_selesai');
+                const layanan = localStorage.getItem('sewa_tipe_layanan') || "Lepas Kunci";
+                const totalBiaya = localStorage.getItem('sewa_total_biaya_akhir') || "Rp 0";
+
+                // Timpa teks HTML berdasarkan ID tanpa merusak desain
+                if (databaseMobil[idMobil]) {
+                    document.getElementById('bayar-mobil').textContent = databaseMobil[idMobil];
+                }
+                document.getElementById('bayar-layanan').textContent = layanan;
+                document.getElementById('bayar-total').textContent = totalBiaya;
+
+                if (tglMulai && tglSelesai) {
+                    const t1 = new Date(tglMulai).toLocaleDateString('id-ID', {
+                        day: 'numeric',
+                        month: 'short'
+                    });
+                    const t2 = new Date(tglSelesai).toLocaleDateString('id-ID', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric'
+                    });
+                    document.getElementById('bayar-tanggal').textContent = `${t1} - ${t2}`;
+                }
+            });
+
             document.getElementById('formPembayaran').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const selectedMethod = document.querySelector('input[name="pembayaran"]:checked');

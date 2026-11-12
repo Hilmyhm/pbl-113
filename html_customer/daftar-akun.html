@@ -25,7 +25,9 @@
             </header>
 
             <section style="max-width: 500px; width: 100%; margin: 0 auto">
-                <form>
+
+                <!--  TAMBAHAN 1: Menambahkan id="registerForm" di tag form ini -->
+                <form id="registerForm">
                     <div class="mb-4 px-3">
                         <label for="nama" class="form-label">Nama Lengkap:</label>
                         <input type="text" class="form-control" style="border-color: #0b1d33" id="nama" name="nama" placeholder="Nama sesui KTP" required />
@@ -48,20 +50,116 @@
 
                     <div class="mb-4 px-3">
                         <label for="konfirmasi-password" class="form-label">Konfirmasi Password</label>
+
+                        <!--  TAMBAHAN 2: Memastikan id nya persis "konfirmasi-password" -->
                         <input type="password" class="form-control" style="border-color: #0b1d33" id="konfirmasi-password" name="konfirmasi-password" placeholder="Ulangi password" minlength="8" required />
                     </div>
 
                     <div class="d-grid gap-2 px-3">
-                        <button class="btn text-white fw-bold py-2" type="submit" style="background-color: #0b1d33; border-color: #0b1d33"> Daftar </button>
+
+                        <!--  TAMBAHAN 3: Menambahkan div kosong ini untuk tempat munculnya tulisan sukses/error -->
+                        <div id="messageBox" class="text-center mb-2 d-none fw-medium fs-6"></div>
+
+                        <!--  TAMBAHAN 4: Menambahkan id="registerBtn" di tombol ini -->
+                        <button id="registerBtn" class="btn text-white fw-bold py-2" type="submit" style="background-color: #0b1d33; border-color: #0b1d33"> Daftar </button>
+
                     </div>
                 </form>
             </section>
 
-            <section>
+            <section class="mt-3">
                 <p>Sudah punya akun? <a href="login.html">Login</a></p>
             </section>
         </div>
     </main>
+
+    <!--  TAMBAHAN 5: SEMUA BLOK SCRIPT DI BAWAH INI ADALAH KODE BARU -->
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Mengambil semua data yang diketik di form
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const noHp = document.getElementById('no').value;
+            const password = document.getElementById('password').value;
+            const konfirmasi = document.getElementById('konfirmasi-password').value;
+
+            const messageBox = document.getElementById('messageBox');
+            const registerBtn = document.getElementById('registerBtn');
+
+            // Validasi Frontend: Cek apakah password salah ketik
+            if (password !== konfirmasi) {
+                messageBox.textContent = 'Password dan Konfirmasi tidak cocok!';
+                messageBox.className = 'text-danger text-center mb-2 fw-medium fs-6';
+                return;
+            }
+
+            // Ubah tombol jadi "Memproses..."
+            const originalText = registerBtn.innerHTML;
+            registerBtn.innerHTML = 'Memproses...';
+            registerBtn.disabled = true;
+            messageBox.classList.add('d-none');
+
+            /* ==============================================================================
+               AREA BACKEND: GANTI KODE DI BAWAH INI NANTI SAAT API IRFAN SUDAH JADI 🚨
+               ==============================================================================
+               
+               Nanti, kamu hapus kode "KODE SIMULASI" di bawah, lalu buka komentar kode Fetch 
+               ini. Jangan lupa minta URL API yang benar ke Irfan (ganti 'URL_API_DARI_IRFAN').
+
+               fetch('URL_API_DARI_IRFAN', {
+                   method: 'POST',
+                   headers: {
+                       'Content-Type': 'application/json'
+                   },
+                   body: JSON.stringify({
+                       nama: nama,
+                       email: email,
+                       no_hp: noHp,
+                       password: password
+                   })
+               })
+               .then(response => response.json())
+               .then(data => {
+                   if(data.status === 'success') {
+                       messageBox.textContent = 'Pendaftaran berhasil! Mengarahkan ke Login...';
+                       messageBox.className = 'text-success text-center mb-2 fw-medium fs-6';
+                       setTimeout(() => { window.location.href = 'login.html'; }, 1500);
+                   } else {
+                       messageBox.textContent = data.message; 
+                       messageBox.className = 'text-danger text-center mb-2 fw-medium fs-6';
+                       registerBtn.innerHTML = originalText;
+                       registerBtn.disabled = false;
+                   }
+               })
+               .catch(error => {
+                   messageBox.textContent = 'Server error!';
+                   messageBox.className = 'text-danger text-center mb-2 fw-medium fs-6';
+                   registerBtn.innerHTML = originalText;
+                   registerBtn.disabled = false;
+               });
+
+            ============================================================================== */
+
+
+            // ⬇ HAPUS KODE SIMULASI INI NANTI KALAU SUDAH PAKAI FETCH API DI ATAS ⬇️
+            setTimeout(() => {
+                localStorage.setItem('akun_email', email);
+                localStorage.setItem('akun_password', password);
+                localStorage.setItem('akun_nama', nama);
+                localStorage.setItem('akun_hp', noHp);
+
+                messageBox.textContent = 'Pendaftaran berhasil! Mengarahkan ke Login...';
+                messageBox.className = 'text-success text-center mb-2 fw-medium fs-6';
+
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 1500);
+            }, 1000);
+
+        });
+    </script>
 </body>
 
 </html>

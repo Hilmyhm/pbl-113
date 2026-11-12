@@ -36,7 +36,8 @@
 
         <section class="text-center my-2">
             <p class="text-muted small mb-1">Nominal pembayaran</p>
-            <h3 class="fw-bold text-dark mb-2">Rp 1.400.000</h3>
+            <!-- 🟢 DITAMBAHKAN ID: qris-total -->
+            <h3 id="qris-total" class="fw-bold text-dark mb-2">Rp 1.400.000</h3>
             <span class="badge bg-warning bg-opacity-25 text-warning-emphasis rounded-pill px-3 py-2 fw-semibold">Menunggu Pembayaran</span>
         </section>
 
@@ -56,6 +57,13 @@
         </div>
 
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const totalBiaya = localStorage.getItem('sewa_total_biaya_akhir') || "Rp 0";
+            document.getElementById('qris-total').textContent = totalBiaya;
+        });
+    </script>
 
 </body>
 
