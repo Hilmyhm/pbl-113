@@ -92,14 +92,34 @@
                                     <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fw-medium">Aktif</span>
                                 </div>
 
-                                <div class="mb-3 text-center">
-                                    <img src="../img_admin/edit-mobil/Current vehicle photo.png" alt="Foto Mobil" class="img-fluid rounded-4 object-fit-cover shadow-sm" style="height: 220px; width: 100%;" />
-                                </div>
+                                <div id="carouselFotoMobil" class="carousel slide mb-3 rounded-4 overflow-hidden shadow-sm" data-bs-ride="carousel" data-bs-interval="3500" data-bs-touch="true">
+                                    <div class="carousel-indicators" id="carousel-foto-indikator">
+                                        <button type="button" data-bs-target="#carouselFotoMobil" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></button>
+                                        <button type="button" data-bs-target="#carouselFotoMobil" data-bs-slide-to="1" aria-label="Foto 2"></button>
+                                        <button type="button" data-bs-target="#carouselFotoMobil" data-bs-slide-to="2" aria-label="Foto 3"></button>
+                                    </div>
 
-                                <button type="button" class="btn btn-outline-secondary w-100 rounded-pill py-2 d-flex align-items-center justify-content-center gap-2 fw-medium" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <img src="../img_admin/edit-mobil/image.svg" alt="" width="18" height="18" />
-                            <span>Ganti Foto</span>
-                        </button>
+                                    <div class="carousel-inner" id="carousel-foto-inner">
+                                        <div class="carousel-item active">
+                                            <img src="../img_admin/data-mobil/source/1.jpg" class="d-block w-100 object-fit-cover" style="height: 220px;" alt="Foto mobil 1" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img_admin/data-mobil/source/2.jpg" class="d-block w-100 object-fit-cover" style="height: 220px;" alt="Foto mobil 2" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../img_admin/data-mobil/source/3.jpg" class="d-block w-100 object-fit-cover" style="height: 220px;" alt="Foto mobil 3" />
+                                        </div>
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotoMobil" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Sebelumnya</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFotoMobil" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Berikutnya</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -109,7 +129,7 @@
                                     <header class="mb-4">
                                         <h3 class="fw-bold text-dark">Informasi kendaraan</h3>
                                         <p class="text-muted small mb-1">Terakhir diperbarui 28 September 2026 oleh Admin Operasional.</p>
-                                        <p class="text-secondary small fw-medium mb-0">Kode_Mobil.xxxxxx</p>
+                                        <p class="text-secondary small fw-medium mb-0" id="kode-mobil">Kode_Mobil.xxxxxx</p>
                                     </header>
 
 
@@ -165,7 +185,7 @@
                                         <a href="data-mobil.html" class="btn text-white px-4 py-2 rounded-pill fw-medium shadow-sm text-decoration-none" style="background-color: #ff7a3d;">
                                             Kembali
                                         </a>
-                                        <a href="edit-mobil.html" class="btn btn-outline-secondary px-4 py-2 rounded-pill fw-medium shadow-sm text-decoration-none">
+                                        <a href="edit-mobil.html" id="btn-edit-mobil" class="btn btn-outline-secondary px-4 py-2 rounded-pill fw-medium shadow-sm text-decoration-none">
                                             Edit
                                         </a>
                                     </div>
@@ -199,52 +219,10 @@
 
     <!-- link scrip js bostrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
     <!-- script js manual -->
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // 1. Tangkap ID dari URL (?id=...)
-            const urlParams = new URLSearchParams(window.location.search);
-            const idMobil = urlParams.get('id');
-
-            let dbMobil = JSON.parse(localStorage.getItem('dbMobil')) || [];
-            // 2. Cari data mobil yang ID-nya cocok
-            const dataYangMauDiedit = dbMobil.find(mobil => mobil.id === idMobil);
-
-            if (dataYangMauDiedit) {
-                // 3. Masukkan datanya ke dalam form HTML secara otomatis
-                document.getElementById('merk').value = dataYangMauDiedit.merk;
-                document.getElementById('nama-mobil').value = dataYangMauDiedit.nama;
-                document.getElementById('jenis').value = dataYangMauDiedit.jenis;
-                document.getElementById('status').value = dataYangMauDiedit.status;
-                document.getElementById('harga-sewa').value = dataYangMauDiedit.harga;
-                document.getElementById('plat-nomor').value = dataYangMauDiedit.plat;
-                document.getElementById('spesifikasi').value = dataYangMauDiedit.spesifikasi;
-            }
-
-            // 4. Proses saat tombol Simpan Perubahan diklik
-            document.getElementById('form-edit').addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                // Update data di dalam array
-                const index = dbMobil.findIndex(mobil => mobil.id === idMobil);
-                if (index !== -1) {
-                    dbMobil[index].merk = document.getElementById('merk').value;
-                    dbMobil[index].nama = document.getElementById('nama-mobil').value;
-                    dbMobil[index].jenis = document.getElementById('jenis').value;
-                    dbMobil[index].status = document.getElementById('status').value;
-                    dbMobil[index].harga = document.getElementById('harga-sewa').value;
-                    dbMobil[index].plat = document.getElementById('plat-nomor').value;
-                    dbMobil[index].spesifikasi = document.getElementById('spesifikasi').value;
-
-                    // Simpan ulang ke localStorage
-                    localStorage.setItem('dbMobil', JSON.stringify(dbMobil));
-                    alert('Data berhasil diubah!');
-                    window.location.href = 'data-mobil.html';
-                }
-            });
-        });
-    </script>
+    <script src="js/mobil-store.js"></script>
+    <script src="js/detail-mobil.js"></script>
 
 </body>
 
