@@ -1,78 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beranda</title>
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
-    <header>
-        <h1>Beranda</h1>
-    </header>
+  <body class="m-0 p-0" style="color: #0b1d33">
+    <div style="background-color: aliceblue">
+      <nav class="navbar px-3 w-100" style="background-color: white">
+        <div class="container-fluid px-2">
+          <div class="w-100 px-3 py-1 d-flex align-items-center">
+            <h1 class="fw-bold m-0 fs-2">Beranda</h1>
+          </div>
+        </div>
+      </nav>
 
-    <main>
-        <section>
-            <img src="../css/profil-cs.svg" alt="Foto profil">
-            <p>Halo,</p>
-            <h2>Nama Customer</h2>
-            <a href="profil.html" aria-label="Menuju profil">></a>
+      <main style="background-color: aliceblue">
+        <section class="px-3 p-3 mt-2">
+          <div
+            class="bg-white rounded-4 p-2 shadow-sm d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center gap-3">
+              <img
+                src="../img/dasboard.c/gambar-orang-gede.svg"
+                alt="Foto profil"
+              />
+              <div>
+                <p class="m-0 text-muted fs-6">Halo,</p>
+                <h2 class="fw-bold m-0 fs-5">Nama Customer</h2>
+              </div>
+            </div>
+            <a
+              href="profil.html"
+              aria-label="Menuju profil"
+              class="text-decoration-none text-dark fs-4 px-2 fw-bold"
+              >></a
+            >
+          </div>
+        </section>
+
+        <section class="px-3 my-3">
+          <div
+            class="rounded-4 p-4 text-dark position-relative overflow-hidden shadow-sm"
+            style="
+              background-image: url(&quot;../img/foto-mobil-landing-page-kiri.png&quot;);
+              background-size: cover;
+              background-position: center;
+              min-height: 550px;
+            "
+          >
+            <div class="position-relative z-1">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <div
+                  class="rounded-4 p-2 d-flex align-items-center justify-content-center"
+                  style="width: 56px; height: 56px; background-color: navy"
+                >
+                  <img
+                    src="../img/dasboard.c/info.svg"
+                    alt="Info"
+                    width="30"
+                    height="24"
+                  />
+                </div>
+                <h2 class="fw-bold m-0 fs-12" style="color: white">
+                  Informasi Layanan
+                </h2>
+              </div>
+              <p class="m-0 fs-5" style="color: white">
+                Sewa mobil lepas kunci atau dengan sopir. Bayar QRIS / Tunai
+              </p>
+            </div>
+          </div>
         </section>
 
         <section>
-            <img src="../css/halaman-mobil(atas).png" alt="Foto mobil">
-            <img src="../css/info.svg" alt="Info">
-            <h2>Informasi Layanan</h2>
-            <p>Sewa mobil lepas kunci atau dengan sopir. Bayar QRIS / Tunai</p>
+          <h2 class="fw-bold px-3 m-0 fs-5">Ringkasan Pesanan</h2>
+          <div class="d-flex gap-3 px-3 my-3">
+            <article
+              class="bg-white rounded-4 shadow-sm p-3 text-center flex-fill"
+            >
+              <strong class="fs-4 text-warning" style="color: red !important"
+                >1</strong
+              >
+              <p class="m-0 text-muted small fw-semibold">Aktif</p>
+            </article>
+
+            <article
+              class="bg-white rounded-4 shadow-sm p-3 text-center flex-fill"
+            >
+              <strong class="fs-4 text-warning" style="color: green !important"
+                >1</strong
+              >
+              <p class="m-0 text-muted small fw-semibold">Menunggu</p>
+            </article>
+
+            <article
+              class="bg-white rounded-4 shadow-sm p-3 text-center flex-fill"
+            >
+              <strong class="fs-4 text-warning" style="color: blue !important"
+                >4</strong
+              >
+              <p class="m-0 text-muted small fw-semibold">Selesai</p>
+            </article>
+          </div>
         </section>
 
-        <section>
-            <h2>Ringkasan Pesanan</h2>
-            <article>
-                <strong>1</strong>
-                <p>Aktif</p>
-            </article>
-
-            <article>
-                <strong>1</strong>
-                <p>Menunggu</p>
-            </article>
-
-            <article>
-                <strong>4</strong>
-                <p>Selesai</p>
-            </article>
+        <section class="px-3 my-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold m-0 fs-5 text-dark">Pesanan Terakhir</h2>
+            <a
+              href="riwayat.html"
+              class="text-decoration-none small fw-semibold"
+              style="color: #0b1d33"
+              >Lihat semua</a
+            >
+          </div>
+          <article class="bg-white rounded-4 shadow-sm p-3 border-0">
+            <div class="d-flex gap-3 align-items-center mb-3">
+              <img
+                src="../img/Toyota-Avanza.jpeg"
+                alt="Toyota Avanza"
+                class="rounded-3 object-fit-cover"
+                style="width: 100px; height: 75px"
+              />
+              <div>
+                <h3 class="fw-bold fs-6 mb-1 text-dark">Toyota Avanza</h3>
+                <p class="text-muted small mb-2">12 Okt - 14 Okt 2026</p>
+                <span
+                  class="badge px-3 py-1 rounded-pill fw-semibold"
+                  style="
+                    background-color: #fff3cd;
+                    color: #856404;
+                    font-size: 0.75rem;
+                  "
+                >
+                  Menunggu Verifikasi
+                </span>
+              </div>
+            </div>
+            <hr class="text-muted opacity-25 my-1" />
+            <div class="d-flex justify-content-between align-items-center pt-1">
+              <span class="text-muted small">MPV Keluarga · 7 Kursi</span>
+              <a
+                href="detail-pesanan.html"
+                class="text-decoration-none small fw-bold d-inline-flex align-items-center gap-1"
+                style="color: #0b1d33"
+              >
+                <span>Lihat Detail</span>
+                <span>></span>
+              </a>
+            </div>
+          </article>
         </section>
+      </main>
 
-        <section>
-            <h2>Pesanan Terakhir</h2>
-            <a href="riwayat.html" aria-label="Lihat semua">Lihat semua</a>
-            <article>
-                <img src="../css/toyota-avanza.jpg" alt="Toyota Avanza">
-                <h3>Toyota Avanza</h3>
-                <p>12 Okt - 14 Okt 2026</p>
-                <p>Menunggu Konfirmasi</p>
-                <p>MPV Keluarga · 7 Kursi</p>
-                <a href="detail-pesanan.html" aria-label="Lihat detail">></a>
-            </article>
-        </section>
-    </main>
-
-    <nav>
-        <a href="beranda.html" aria-label="Menuju beranda">
-            <img src="../css/beranda.svg" alt="Beranda">
+      <div style="height: 100px; background-color: aliceblue"></div>
+    </div>
+    <nav class="navbar fixed-bottom bg-white border-top py-2 px-3 shadow-sm">
+      <div
+        class="container-fluid d-flex justify-content-around align-items-center"
+      >
+        <a
+          href="beranda.html"
+          aria-label="Menuju beranda"
+          class="d-flex flex-column align-items-center text-decoration-none py-1 px-3 rounded-pill"
+          style="background-color: rgba(255, 107, 53, 0.12)"
+        >
+          <img
+            src="../img/dasboard.c/rumah-oren.svg"
+            alt="Beranda"
+            style="
+              width: 22px;
+              height: 22px;
+              filter: invert(41%) sepia(85%) saturate(1436%) hue-rotate(338deg)
+                brightness(101%) contrast(97%);
+            "
+          />
+          <span class="small mt-1 text-muted" style="font-size: 0.7rem"
+            >Beranda</span
+          >
         </a>
-        <a href="katalog.html" aria-label="Menuju katalog">
-            <img src="../css/katalog.svg" alt="Katalog">
+        <a
+          href="katalog.html"
+          aria-label="Menuju katalog"
+          class="d-flex flex-column align-items-center text-decoration-none py-1 px-3"
+        >
+          <img
+            src="../img/dasboard.c/car.svg"
+            alt="Katalog"
+            style="width: 22px; height: 22px; opacity: 0.6"
+          />
+          <span class="small mt-1 text-muted" style="font-size: 0.7rem"
+            >Katalog</span
+          >
         </a>
-        <a href="riwayat.html" aria-label="Menuju riwayat">
-            <img src="../css/riwayat.svg" alt="Riwayat">
+        <a
+          href="riwayat.html"
+          aria-label="Menuju riwayat"
+          class="d-flex flex-column align-items-center text-decoration-none py-1 px-3"
+        >
+          <img
+            src="../img/dasboard.c/jam.svg"
+            alt="Riwayat"
+            style="width: 22px; height: 22px; opacity: 0.6"
+          />
+          <span class="small mt-1 text-muted" style="font-size: 0.7rem"
+            >Riwayat</span
+          >
         </a>
-        <a href="profil.html" aria-label="Menuju profil">
-            <img src="../css/profil.svg" alt="Profil">
+        <a
+          href="profil.html"
+          aria-label="Menuju profil"
+          class="d-flex flex-column align-items-center text-decoration-none py-1 px-3"
+        >
+          <img
+            src="../img/dasboard.c/gambar-orang-kecil.svg"
+            alt="Profil"
+            style="width: 22px; height: 22px; opacity: 0.6"
+          />
+          <span class="small mt-1 text-muted" style="font-size: 0.7rem"
+            >Profil</span
+          >
         </a>
+      </div>
     </nav>
-</body>
-
+  </body>
 </html>

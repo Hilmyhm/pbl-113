@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Layanan</title>
+  </head>
+  <body>
+    <header>
+      <h1>Detail Layanan</h1>
+      <a href="pilihan-layanan.html" aria-label="Kembali ke Pilihan Layanan">
+        <img src="../img/detail-layanan-dengan-sopir/kembali.svg" alt="" />
+      </a>
+    </header>
+
+    <main>
+      <p>Dengan Sopir</p>
+      <form action="ringkasan-pemesanan.html" method="get">
+        <label for="alamat-penjemputan">Alamat / Titik Penjemputan</label>
+        <textarea
+          id="alamat-penjemputan"
+          name="alamat-penjemputan"
+          placeholder="Tulis alamat lengkap..."
+          required
+        ></textarea>
+
+        <div>
+          <img
+            src="../img/detail-layanan-dengan-sopir/icon-sopir-sudah-diverifikasi.svg"
+            alt=""
+          />
+          <p>
+            Sopir terverifikasi akan menghubungi Anda 30 menit sebelum
+            penjemputan.
+          </p>
+        </div>
+
+        <button type="submit">
+          Lanjut
+          <img src="../img/detail-layanan-dengan-sopir/lanjut.svg" alt="" />
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

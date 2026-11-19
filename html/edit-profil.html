@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profil</title>
+  </head>
+  <body>
+    <header>
+      <h1>Edit Profil</h1>
+    </header>
+
+    <a href="profil.html" aria-label="Kembali ke Profil">
+      <img src="../img/edit profil/panah-kiri.svg" alt="" />
+    </a>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="foto-profil">Foto Profil</label>
+
+        <label for="foto-profil">
+          <img
+            src="../img/edit profil/upload.svg"
+            alt=""
+            width="24"
+            height="24"
+          />
+          <span>Unggah / ambil foto</span>
+        </label>
+
+        <input
+          type="file"
+          id="foto-profil"
+          name="foto-profil"
+          accept="image/*"
+        />
+      </div>
+
+      <div>
+        <label for="nama">Nama Lengkap</label>
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          placeholder="Nama sesuai KTP"
+        />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="contoh@email.com"
+        />
+      </div>
+
+      <div>
+        <label for="nomor-hp">Nomor HP</label>
+        <input
+          type="tel"
+          id="nomor-hp"
+          name="nomor-hp"
+          placeholder="08xxxxxxxxxx"
+        />
+      </div>
+
+      <div>
+        <label for="password">Password Baru</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Minimal 8 karakter"
+        />
+      </div>
+
+      <div>
+        <label for="konfirmasi-password">Konfirmasi Password</label>
+        <input
+          type="password"
+          id="konfirmasi-password"
+          name="konfirmasi-password"
+          placeholder="Ulangi password"
+        />
+      </div>
+
+      <button type="submit">Simpan</button>
+    </form>
+  </body>
+</html>
